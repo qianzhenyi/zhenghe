@@ -1,0 +1,2535 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		body{
+				position: relative;
+			}
+			.ok{
+				 position: absolute;
+				 left:-4%;
+				 top:5%;
+				 transition: all 1s; 
+			}
+			.ok:hover{
+				position: absolute;
+				 left:0;
+				 top:5%;
+			}
+			* {
+				margin: 0px;
+				padding: 0px;
+				border: 0px;
+			}
+			
+			body,
+			html {
+				width: 100%;
+				height: 100%;
+			}
+			/*#top {
+				width: 100%;
+				height: 6%;
+				background: red;position: relative;
+			}
+			*/
+			
+			.top {
+				text-align: center;
+				/*padding-top: 2%;*/
+			}
+			
+			.top p {
+				display: inline-block;
+			}
+			
+			.top .left,
+			.top .right {
+				font-size: 14px;
+				color: white;
+			}
+			
+			.top .mid {
+				padding: 0 8%;
+				font-size: 23px;
+				color: white;
+			}
+			
+			#world {
+				width: 100%;
+				height: 90%;
+				/*background-image: url(img/beijing.png);*/
+				background-repeat: no-repeat;
+				background-size: cover;
+				position: relative;
+			}
+			
+			#map-wrap {
+				width: 65%;
+				height: 100%;
+				float: left;
+			}
+			
+			.world-you {
+				width: 35%;
+				height: 100%;
+				float: left;
+			}
+			
+			.big1 {
+				width: 90%;
+				height: 23%;
+				margin-top: 2%;
+				background: #434141;
+			}
+			
+			.big2 {
+				width: 90%;
+				height: 23%;
+				margin-top: 2%;
+				background: #454e57;
+			}
+			
+			.big3 {
+				width: 90%;
+				height: 23%;
+				margin-top: 2%;
+				background: #515e6d;
+			}
+			
+			.big4 {
+				width: 90%;
+				height: 23%;
+				margin-top: 2%;
+				background: #6a7889;
+			}
+			
+			.fangda1 {
+				float: left;
+				margin-top: 1%;
+			}
+			
+			.fangda1:hover {
+				cursor: pointer;
+			}
+			
+			.fangda2 {
+				float: left;
+				margin-top: 1%;
+			}
+			
+			.fangda2:hover {
+				cursor: pointer;
+			}
+			
+			.fangda3 {
+				float: left;
+				margin-top: 1%;
+			}
+			
+			.fangda3:hover {
+				cursor: pointer;
+			}
+			
+			.fangda4 {
+				float: left;
+				margin-top: 1%;
+			}
+			
+			.fangda4:hover {
+				cursor: pointer;
+			}
+			
+			.world-he1 {
+				width: 95%;
+				height: 100%;
+				float: left;
+			}
+			
+			.world-he2 {
+				width: 95%;
+				height: 100%;
+				float: left;
+			}
+			
+			.world-he3 {
+				width: 95%;
+				height: 100%;
+				float: left;
+			}
+			
+			.world-he4 {
+				width: 95%;
+				height: 100%;
+				float: left;
+			}
+			
+			#bottom {
+				width: 100%;
+				height: 4%;
+				/*background: red;*/
+				position: relative;
+			}
+			
+			.ling1 {
+				width: 60%;
+				height: 60%;
+				background: #3e61aa;
+				position: absolute;
+				top: 25%;
+				left: 20%;
+				display: none;
+				z-index: 100;
+			}
+			
+			.div-he1 {
+				width: 790px;
+				height: 390px;
+				float: left;
+				position: absolute;
+			}
+			
+			.fangxiao1 {
+				float: right;
+				margin-top: 1%;
+			}
+			
+			.fangxiao1:hover {
+				cursor: pointer;
+			}
+			
+			.ling2 {
+				width: 60%;
+				height: 60%;
+				background: #3e61aa;
+				left: 20%;
+				position: absolute;
+				top: 25%;
+				display: none;
+				z-index: 100;
+			}
+			
+			.div-he2 {
+				width: 790px;
+				height: 390px;
+				float: left;
+			}
+			
+			.fangxiao2 {
+				float: right;
+				margin-top: 1%;
+			}
+			
+			.fangxiao2:hover {
+				cursor: pointer;
+			}
+			
+			.ling3 {
+				width: 60%;
+				height: 60%;
+				background: #3e61aa;
+				left: 20%;
+				position: absolute;
+				top: 25%;
+				display: none;
+				z-index: 100;
+			}
+			
+			.div-he3 {
+				;
+				width: 790px;
+				height: 390px;
+				float: left;
+			}
+			
+			.fangxiao3 {
+				float: right;
+				margin-top: 1%;
+			}
+			
+			.fangxiao3:hover {
+				cursor: pointer;
+			}
+			
+			.ling4 {
+				width: 60%;
+				height: 60%;
+				background: #3e61aa;
+				left: 20%;
+				position: absolute;
+				top: 25%;
+				display: none;
+				z-index: 100;
+			}
+			
+			.div-he4 {
+				width: 790px;
+				height: 390px;
+				float: left;
+			}
+			
+			.fangxiao4 {
+				float: right;
+				margin-top: 1%;
+			}
+			
+			.fangxiao4:hover {
+				cursor: pointer;
+			}
+			
+			.gai {
+				height: 100%;
+				width: 100%;
+				background: white;
+				position: absolute;
+				opacity: 0.3;
+				display: none;
+				top: 0;
+			}
+			
+			.aaa {
+				width: 100%;
+				height: 100%;
+				background-image: url(img/beijing.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			
+			.footer {
+				font-size: 13px;
+				text-align: center;
+				/*margin-top: 4%;*/
+				color: white;
+			}
+			
+			.footer span {
+				display: inline-block;
+				margin-left: 2%;
+				margin-right: 3%;
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="aaa">
+			<div class="top">
+				<p class="left">
+					<span class="span1">2017年7月14日 星期五</span>
+					<span class="span2">10:01</span>
+					<span class="span3">天气：晴转多云</span>
+				</p>
+				<p class="mid">北方跨境电商大数据中心</p>
+				<p class="right">系统通知：消防系统紧急演练，时间07/10</p>
+			</div>
+			<div id="world">
+				<div id="map-wrap"></div>
+				<div class="world-you">
+					<div class="big1">
+						<div class="world-he1"></div>
+						<img src="img/da.png" class="fangda1" title="放大" />
+					</div>
+					<div class="big2">
+						<div class="world-he2"></div>
+						<img src="img/da.png" class="fangda2" title="放大" />
+					</div>
+					<div class="big3">
+						<div class="world-he3"></div>
+						<img src="img/da.png" class="fangda3" title="放大" />
+					</div>
+					<div class="big4">
+						<div class="world-he4"></div>
+						<img src="img/da.png" class="fangda4" title="放大" />
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<span>京公网安备 11000002000088号</span>|
+				<span>京ICP证070359号|互联网药品信息服务资格证编号（京）-经营性-2014-0008</span>|
+				<span>新出发京零字第大12007号</span>
+			</div>
+			<div class="ling1">
+				<div class="div-he1"></div>
+				<img src="img/fangxiao.png" class="fangxiao1" title="放小" />
+			</div>
+			<div class="ling2">
+				<div class="div-he2"></div>
+				<img src="img/fangxiao.png" class="fangxiao2" title="放小" />
+			</div>
+			<div class="ling3">
+				<div class="div-he3"></div>
+				<img src="img/fangxiao.png" class="fangxiao3" title="放小" />
+			</div>
+			<div class="ling4">
+				<div class="div-he4"></div>
+				<img src="img/fangxiao.png" class="fangxiao4" title="放小" />
+			</div>
+			<div class="gai"></div>
+		</div>
+		<div class="ok"><a href="../index.html"><img src="img/yy.png"/></a></div>
+	</body>
+	<script type="text/javascript" src="js/echarts.js"></script>
+	<script type="text/javascript" src="js/world.js"></script>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var mapChart = echarts.init(document.getElementById('map-wrap'));
+		var geoCoordMap = {
+			'中国': [116.3002283764, 39.9181370976],
+			'日本': [130.21, 33.39],
+			'澳大利亚': [140.17, -25.55],
+			'印度': [78, 27.09],
+			'马来西亚': [101.42, 5.08],
+			'俄罗斯': [37.37, 55.45],
+			'美国': [-77.02, 38.52],
+			'墨西哥': [-99.56, 20.52],
+			'巴西': [-47.3, -15.5],
+			'西班牙': [-2.06, 41.18],
+			'法国': [3.2, 48.51],
+			'德国': [10.2, 52.31],
+			'英国': [0, 55.04],
+			'意大利': [11.15, 45.28],
+			'韩国': [126.38, 37.3],
+		};
+		//value  可控制光点大小
+		var BJData = [
+			[{
+				name: '中国'
+			}, {
+				name: '日本',
+				value: 60
+			}],
+			[{
+				name: '中国'
+			}, {
+				name: '印度',
+				value: 60
+			}],
+			[{
+				name: '中国'
+			}, {
+				name: '澳大利亚',
+				value: 60
+			}],
+			[{
+				name: '中国'
+			}, {
+				name: '马来西亚',
+				value: 60
+			}],
+			[{
+				name: '中国'
+			}, {
+				name: '俄罗斯',
+				value: 60
+			}],
+			[{
+				name: '中国'
+			}, {
+				name: '美国',
+				value: 60
+			}],
+			[{
+				name: '中国'
+			}, {
+				name: '墨西哥',
+				value: 60
+			}],
+			[{
+				name: '中国'
+			}, {
+				name: '巴西',
+				value: 60
+			}],
+			[{
+				name: '中国'
+			}, {
+				name: '西班牙',
+				value: 60
+			}],
+			[{
+				name: '中国'
+			}, {
+				name: '法国',
+				value: 60
+			}],
+			[{
+				name: '中国'
+			}, {
+				name: '德国',
+				value: 60
+			}],
+			[{
+				name: '中国'
+			}, {
+				name: '英国',
+				value: 60
+			}],
+			[{
+				name: '中国'
+			}, {
+				name: '意大利',
+				value: 60
+			}],
+			[{
+				name: '中国'
+			}, {
+				name: '中国',
+				value: 60
+			}],
+			[{
+				name: '中国'
+			}, {
+				name: '韩国',
+				value: 60
+			}],
+		];
+		var convertData = function(data) {
+			var res = [];
+			for(var i = 0; i < data.length; i++) {
+				var dataItem = data[i];
+				var fromCoord = geoCoordMap[dataItem[0].name];
+				var toCoord = geoCoordMap[dataItem[1].name];
+				if(fromCoord && toCoord) {
+					res.push({
+						fromName: dataItem[0].name,
+						toName: dataItem[1].name,
+						coords: [fromCoord, toCoord]
+					});
+				}
+			}
+			return res;
+		};
+		var color = ['#fdd442'];
+		var series = [];
+		[
+			['中国', BJData]
+		].forEach(function(item, i) {
+			series.push({
+
+				name: '贸易' + ' Top15',
+				type: 'effectScatter',
+				coordinateSystem: 'geo',
+				zlevel: 2,
+				rippleEffect: {
+					brushType: 'stroke'
+				},
+				label: {
+					//地名
+					normal: {
+						show: false,
+						position: 'right',
+						formatter: '{b}',
+						shadowBlur: 2,
+						shadowColor: 'rgba(255, 255, 255, 0.8)',
+					}
+				},
+				symbolSize: function(val) {
+					return val[2] / 8;
+				},
+				itemStyle: {
+					normal: {
+						color: color[0],
+						shadowBlur: 10,
+						shadowColor: 'rgba(255, 255, 255, 0.8)',
+					}
+				},
+				data: item[1].map(function(dataItem) {
+					return {
+						name: dataItem[1].name,
+						value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value])
+					};
+				})
+			});
+		});
+		option = {
+			backgroundColor: '',
+			title: {
+				//标题
+				text: '2017年6月28日网络热销产品走势图',
+				left: 'center',
+				top: '15%',
+				textStyle: {
+					color: '#fff',
+					fontSize: '30',
+					fontFamily: '宋体'
+				}
+			},
+			tooltip: {
+				trigger: 'item'
+			},
+			//地图样式
+			geo: {
+				map: 'world',
+				top: '35%',
+				label: {
+					emphasis: {
+						show: false
+					}
+				},
+				//地图可否拖动
+				roam: false,
+				itemStyle: {
+					normal: {
+						//地图颜色
+						areaColor: '#7e93a4',
+						borderColor: '#0f345a'
+					},
+					emphasis: {
+						//hover时颜色
+						areaColor: '#0f345a'
+					}
+				}
+			},
+			series: series
+		};
+		mapChart.setOption(option);
+
+		var mapzhexian1 = echarts.init(document.querySelector('.world-he1'));
+		option = {
+			backgroundColor: '#434141',
+			width: '90%',
+			height: '65%',
+			title: {
+				text: '热销产品销量走势图(单位:万吨)',
+				textStyle: {
+					fontWeight: 'normal',
+					fontFamily: '宋体',
+					fontSize: 8,
+					color: 'white',
+				},
+				left: '2%',
+				top: '3%'
+			},
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					lineStyle: {
+						color: '#57617B'
+					}
+				}
+			},
+			legend: {
+				icon: 'rect',
+				itemWidth: 20,
+				itemHeight: 1,
+				itemGap: 3,
+				data: ['美洲', '非洲', '大洋洲', '', '亚洲', '欧洲'],
+				right: '6%',
+				top: '3%',
+				textStyle: {
+					fontSize: 8,
+					color: '#F1F1F3',
+					fontFamily: '宋体'
+				}
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				top: '25%',
+				containLabel: true
+			},
+			xAxis: [{
+				type: 'category',
+				boundaryGap: true,
+				axisLabel: {
+					interval: 0
+
+				},
+				axisTick: {
+					show: false,
+				},
+				axisLine: {
+					lineStyle: {
+						color: 'white',
+						fontSize: 8,
+						fontFamily: '宋体',
+						fontWeight: 'normal'
+					}
+				},
+				data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+			}],
+			yAxis: [{
+				min: 0,
+				max: 1600,
+				interval: 400,
+				type: 'value',
+				axisTick: {
+					show: true,
+					inside: true,
+					length: 2
+				},
+				axisLine: {
+					lineStyle: {
+						color: 'white',
+						fontSize: 8,
+						fontFamily: '宋体',
+						fontWeight: 'normal',
+
+					}
+				},
+				axisLabel: {
+					margin: 10,
+					textStyle: {
+						fontSize: 8
+					}
+				},
+				splitLine: {
+					show: false
+				},
+
+				//      data: ['400','','800','','1200','','1600']
+
+			}],
+			series: [{
+				name: '美洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						//						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						//						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(137,189,27)'
+					}
+				},
+				data: [960.3, 960.4, 907.5, 905.6, 980.1, 940.8, 890.6, 940.1, 800.1, 520.4, 750.8, 940.7]
+			}, {
+				name: '非洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(0,136,212)'
+					}
+				},
+				data: [970.3, 909.2, 909.3, 1000.0, 990.6, 900.6, 800.0, 910.5, 690.8, 670.5, 900.4, 840.9]
+			}, {
+				name: '大洋洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(219,50,251)'
+					}
+				},
+				data: [840.2, 801.0, 607.5, 702.1, 430.7, 808.5, 901.9, 101.8, 790.7, 870.6, 920.9, 0]
+			}, {
+				name: '亚洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(243,140,61)'
+					}
+				},
+				data: [840.2, 810.0, 607.5, 702.1, 403.7, 880.5, 901.9, 101.8, 709.7, 807.6, 902.9, 0]
+			}, {
+				name: '欧洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(128,171,204)'
+					}
+				},
+				data: [804.2, 801.0, 607.5, 700.1, 403.7, 808.5, 901.9, 101.8, 790.7, 807.6, 902.9, 0]
+			}, ]
+		};
+		mapzhexian1.setOption(option);
+
+		var mapdivhe1 = echarts.init(document.querySelector('.div-he1'));
+		option = {
+			backgroundColor: '#3e61aa',
+			width: '90%',
+			height: '65%',
+			title: {
+				text: '热销产品销量走势图(单位:万吨)',
+				textStyle: {
+					fontWeight: 'normal',
+					fontFamily: '宋体',
+					fontSize: 25,
+					color: 'white',
+				},
+				left: '2%',
+				top: '3%'
+			},
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					lineStyle: {
+						color: '#57617B'
+					}
+				}
+			},
+			legend: {
+				icon: 'rect',
+				itemWidth: 20,
+				itemHeight: 1,
+				itemGap: 3,
+				data: ['美洲', '非洲', '大洋洲', '', '亚洲', '欧洲'],
+				right: '6%',
+				top: '3%',
+				textStyle: {
+					fontSize: 20,
+					color: '#F1F1F3',
+					fontFamily: '宋体'
+				}
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				top: '25%',
+				containLabel: true
+			},
+			xAxis: [{
+				type: 'category',
+				boundaryGap: true,
+				axisLabel: {
+					interval: 0,
+					textStyle: {
+						fontSize: 16
+					}
+
+				},
+				axisTick: {
+					show: false,
+				},
+				axisLine: {
+					lineStyle: {
+						color: 'white',
+						fontSize: 8,
+						fontFamily: '宋体',
+						fontWeight: 'normal'
+					}
+				},
+				data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+			}],
+			yAxis: [{
+				min: 0,
+				max: 1600,
+				interval: 400,
+				type: 'value',
+				axisTick: {
+					show: true,
+					inside: true,
+					length: 2
+				},
+				axisLine: {
+					lineStyle: {
+						color: 'white',
+						fontSize: 8,
+						fontFamily: '宋体',
+						fontWeight: 'normal',
+
+					}
+				},
+				axisLabel: {
+					margin: 10,
+					textStyle: {
+						fontSize: 16
+					}
+				},
+				splitLine: {
+					show: false
+				},
+
+				//      data: ['400','','800','','1200','','1600']
+
+			}],
+			series: [{
+				name: '美洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(137,189,27)'
+					}
+				},
+				data: [960.3, 960.4, 907.5, 905.6, 980.1, 940.8, 890.6, 940.1, 800.1, 520.4, 750.8, 940.7]
+			}, {
+				name: '非洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(0,136,212)'
+					}
+				},
+				data: [970.3, 909.2, 909.3, 1000.0, 990.6, 900.6, 800.0, 910.5, 690.8, 670.5, 900.4, 840.9]
+			}, {
+				name: '大洋洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(219,50,251)'
+					}
+				},
+				data: [840.2, 801.0, 607.5, 702.1, 430.7, 808.5, 901.9, 101.8, 790.7, 870.6, 920.9, 0]
+			}, {
+				name: '亚洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(243,140,61)'
+					}
+				},
+				data: [840.2, 810.0, 607.5, 702.1, 403.7, 880.5, 901.9, 101.8, 709.7, 807.6, 902.9, 0]
+			}, {
+				name: '欧洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(128,171,204)'
+					}
+				},
+				data: [804.2, 801.0, 607.5, 700.1, 403.7, 808.5, 901.9, 101.8, 790.7, 807.6, 902.9, 0]
+			}, ]
+		};
+		mapdivhe1.setOption(option);
+
+		var mapzhexian2 = echarts.init(document.querySelector('.world-he2'));
+		option = {
+			backgroundColor: '#454e57',
+			width: '90%',
+			height: '65%',
+			title: {
+				text: '热销产品价格走势图(加权指数)',
+				textStyle: {
+					fontWeight: 'normal',
+					fontFamily: '宋体',
+					fontSize: 8,
+					color: 'white',
+				},
+				left: '2%',
+				top: "3%"
+			},
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					lineStyle: {
+						color: '#57617B'
+					}
+				}
+			},
+			legend: {
+				icon: 'rect',
+				itemWidth: 20,
+				itemHeight: 1,
+				itemGap: 3,
+				data: ['美洲', '非洲', '大洋洲', '', '亚洲', '欧洲'],
+				right: '6%',
+				top: '3%',
+				textStyle: {
+					fontSize: 8,
+					color: '#F1F1F3',
+					fontFamily: '宋体'
+				}
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				top: '25%',
+				containLabel: true
+			},
+			xAxis: [{
+				type: 'category',
+				boundaryGap: true,
+				axisLabel: {
+					interval: 0
+
+				},
+				axisTick: {
+					show: false
+				},
+				axisLine: {
+					lineStyle: {
+						color: 'white',
+						fontSize: 8,
+						fontFamily: '宋体',
+						fontWeight: 'normal'
+					}
+				},
+				data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+			}],
+			yAxis: [{
+				min: 0,
+				max: 1600,
+				interval: 400,
+				type: 'value',
+				axisTick: {
+					show: true,
+					inside: true,
+					length: 2
+				},
+				axisLine: {
+					lineStyle: {
+						color: 'white',
+						fontSize: 8
+					}
+				},
+				axisLabel: {
+					margin: 10,
+					textStyle: {
+						fontSize: 8
+					}
+				},
+				splitLine: {
+					show: false
+				},
+				//      data: ['400','','800','','1200','','1600']
+
+			}],
+			series: [{
+				name: '美洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(137,189,27)'
+					}
+				},
+				data: [960.3, 960.4, 907.5, 905.6, 980.1, 940.8, 890.6, 940.1, 800.1, 520.4, 750.8, 940.7]
+			}, {
+				name: '非洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(0,136,212)'
+					}
+				},
+				data: [970.3, 909.2, 909.3, 1000.0, 990.6, 900.6, 800.0, 910.5, 690.8, 670.5, 900.4, 840.9]
+			}, {
+				name: '大洋洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(219,50,251)'
+					}
+				},
+				data: [840.2, 801.0, 607.5, 702.1, 430.7, 808.5, 901.9, 101.8, 790.7, 870.6, 920.9, 0]
+			}, {
+				name: '亚洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(243,140,61)'
+					}
+				},
+				data: [840.2, 810.0, 607.5, 702.1, 403.7, 880.5, 901.9, 101.8, 709.7, 807.6, 902.9, 0]
+			}, {
+				name: '欧洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(128,171,204)'
+					}
+				},
+				data: [804.2, 801.0, 607.5, 700.1, 403.7, 808.5, 901.9, 101.8, 790.7, 807.6, 902.9, 0]
+			}, ]
+		};
+		mapzhexian2.setOption(option);
+
+		var mapdivhe2 = echarts.init(document.querySelector('.div-he2'));
+		option = {
+			backgroundColor: '#3e61aa',
+			width: '90%',
+			height: '65%',
+			title: {
+				text: '热销产品价格走势图(加权指数)',
+				textStyle: {
+					fontWeight: 'normal',
+					fontFamily: '宋体',
+					fontSize: 25,
+					color: 'white',
+				},
+				left: '2%',
+				top: "3%"
+			},
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					lineStyle: {
+						color: '#57617B'
+					}
+				}
+			},
+			legend: {
+				icon: 'rect',
+				itemWidth: 20,
+				itemHeight: 1,
+				itemGap: 3,
+				data: ['美洲', '非洲', '大洋洲', '', '亚洲', '欧洲'],
+				right: '6%',
+				top: '3%',
+				textStyle: {
+					fontSize: 20,
+					color: '#F1F1F3',
+					fontFamily: '宋体'
+				}
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				top: '25%',
+				containLabel: true
+			},
+			xAxis: [{
+				type: 'category',
+				boundaryGap: true,
+				axisLabel: {
+					interval: 0,
+					textStyle: {
+						fontSize: 16
+					}
+
+				},
+				axisTick: {
+					show: false
+				},
+				axisLine: {
+					lineStyle: {
+						color: 'white',
+						fontSize: 8,
+						fontFamily: '宋体',
+						fontWeight: 'normal'
+					}
+				},
+				data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+			}],
+			yAxis: [{
+				min: 0,
+				max: 1600,
+				interval: 400,
+				type: 'value',
+				axisTick: {
+					show: true,
+					inside: true,
+					length: 2
+				},
+				axisLine: {
+					lineStyle: {
+						color: 'white',
+						fontSize: 8
+					}
+				},
+				axisLabel: {
+					margin: 10,
+					textStyle: {
+						fontSize: 16
+					}
+				},
+				splitLine: {
+					show: false
+				},
+				//      data: ['400','','800','','1200','','1600']
+
+			}],
+			series: [{
+				name: '美洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(137,189,27)'
+					}
+				},
+				data: [960.3, 960.4, 907.5, 905.6, 980.1, 940.8, 890.6, 940.1, 800.1, 520.4, 750.8, 940.7]
+			}, {
+				name: '非洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(0,136,212)'
+					}
+				},
+				data: [970.3, 909.2, 909.3, 1000.0, 990.6, 900.6, 800.0, 910.5, 690.8, 670.5, 900.4, 840.9]
+			}, {
+				name: '大洋洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(219,50,251)'
+					}
+				},
+				data: [840.2, 801.0, 607.5, 702.1, 430.7, 808.5, 901.9, 101.8, 790.7, 870.6, 920.9, 0]
+			}, {
+				name: '亚洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(243,140,61)'
+					}
+				},
+				data: [840.2, 810.0, 607.5, 702.1, 403.7, 880.5, 901.9, 101.8, 709.7, 807.6, 902.9, 0]
+			}, {
+				name: '欧洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(128,171,204)'
+					}
+				},
+				data: [804.2, 801.0, 607.5, 700.1, 403.7, 808.5, 901.9, 101.8, 790.7, 807.6, 902.9, 0]
+			}, ]
+		};
+		mapdivhe2.setOption(option);
+
+		var mapzhexian3 = echarts.init(document.querySelector('.world-he3'));
+		option = {
+			backgroundColor: '#515e6d',
+			width: '90%',
+			height: '65%',
+			title: {
+				text: '产品定价分析',
+				subtext: '        产品定价                              环比偏移量',
+				subtextStyle: {
+					fontWeight: 'normal',
+					fontFamily: '宋体',
+					fontSize: 8,
+					color: 'white',
+				},
+				textStyle: {
+					fontWeight: 'normal',
+					fontFamily: '宋体',
+					fontSize: 8,
+					color: 'white',
+				},
+				left: '2%',
+				top: '3%',
+				itemGap: 20,
+			},
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					lineStyle: {
+						color: '#57617B'
+					}
+				}
+			},
+			legend: {
+				icon: 'rect',
+				itemWidth: 20,
+				itemHeight: 1,
+				itemGap: 3,
+				data: ['美洲', '非洲', '大洋洲', '', '亚洲', '欧洲'],
+				right: '6%',
+				top: '3%',
+				textStyle: {
+					fontSize: 8,
+					color: '#F1F1F3',
+					fontFamily: '宋体'
+				}
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				top: '25%',
+				containLabel: true
+			},
+			xAxis: [{
+				type: 'category',
+				boundaryGap: true,
+				axisLabel: {
+					interval: 0
+
+				},
+				axisTick: {
+					show: false
+				},
+				axisLine: {
+					lineStyle: {
+						color: 'white',
+						fontSize: 8,
+						fontFamily: '宋体',
+						fontWeight: 'normal'
+					}
+				},
+				data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+			}],
+			yAxis: [{
+				min: 0,
+				max: 2000,
+				interval: 500,
+				type: 'value',
+				axisTick: {
+					show: true,
+					inside: true,
+					length: 2
+				},
+				axisLine: {
+					lineStyle: {
+						color: 'white',
+						fontSize: 8
+					}
+				},
+				axisLabel: {
+					margin: 10,
+					textStyle: {
+						fontSize: 8,
+					}
+				},
+				splitLine: {
+					show: false
+				},
+
+			}, {
+				type: 'value',
+
+				max: 10.0,
+				min: -10.0,
+				interval: 5.0,
+				splitLine: {
+					lineStyle: {
+						color: '#515e6d',
+						textAlign: 'center'
+					}
+				},
+				axisLine: {
+					lineStyle: {
+						color: 'white',
+						fontSize: 8
+					}
+				},
+				axisTick: {
+					show: true,
+					inside: true,
+					length: 2
+				},
+				axisLabel: {
+					margin: 15,
+					textStyle: {
+						fontSize: 8,
+						align: 'center'
+					}
+				},
+			}],
+
+			series: [{
+				name: '美洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(137,189,27)'
+					}
+				},
+				data: [960.3, 960.4, 907.5, 905.6, 980.1, 940.8, 890.6, 940.1, 800.1, 520.4, 750.8, 940.7]
+			}, {
+				name: '非洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(0,136,212)'
+					}
+				},
+				data: [970.3, 909.2, 909.3, 1000.0, 990.6, 900.6, 800.0, 910.5, 690.8, 670.5, 900.4, 840.9]
+			}, {
+				name: '大洋洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(219,50,251)'
+					}
+				},
+				data: [840.2, 801.0, 607.5, 702.1, 430.7, 808.5, 901.9, 101.8, 790.7, 870.6, 920.9, 0]
+			}, {
+				name: '亚洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(243,140,61)'
+					}
+				},
+				data: [840.2, 810.0, 607.5, 702.1, 403.7, 880.5, 901.9, 101.8, 709.7, 807.6, 902.9, 0]
+			}, {
+				name: '欧洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(128,171,204)'
+					}
+				},
+				data: [804.2, 801.0, 607.5, 700.1, 403.7, 808.5, 901.9, 101.8, 790.7, 807.6, 902.9, 0]
+			}, ]
+		};
+		mapzhexian3.setOption(option);
+
+		var mapdivhe3 = echarts.init(document.querySelector('.div-he3'));
+		option = {
+			backgroundColor: '#3e61aa',
+			width: '90%',
+			height: '65%',
+			title: {
+				text: '产品定价分析',
+				subtext: '     产品定价                              环比偏移量',
+				subtextStyle: {
+					fontWeight: 'normal',
+					fontFamily: '宋体',
+					fontSize: 25,
+					color: 'white',
+				},
+				textStyle: {
+					fontWeight: 'normal',
+					fontFamily: '宋体',
+					fontSize: 25,
+					color: 'white',
+				},
+				left: '2%',
+				top: '3%',
+				itemGap: 55,
+			},
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					lineStyle: {
+						color: '#57617B'
+					}
+				}
+			},
+			legend: {
+				icon: 'rect',
+				itemWidth: 20,
+				itemHeight: 1,
+				itemGap: 3,
+				data: ['美洲', '非洲', '大洋洲', '', '亚洲', '欧洲'],
+				right: '6%',
+				top: '3%',
+				textStyle: {
+					fontSize: 20,
+					color: '#F1F1F3',
+					fontFamily: '宋体'
+				}
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				top: '25%',
+				containLabel: true
+			},
+			xAxis: [{
+				type: 'category',
+				boundaryGap: true,
+				axisLabel: {
+					interval: 0,
+					textStyle: {
+						fontSize: 16
+					}
+
+				},
+				axisTick: {
+					show: false
+				},
+				axisLine: {
+					lineStyle: {
+						color: 'white',
+						fontSize: 8,
+						fontFamily: '宋体',
+						fontWeight: 'normal'
+					}
+				},
+				data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+			}],
+			yAxis: [{
+				min: 0,
+				max: 2000,
+				interval: 500,
+				type: 'value',
+				axisTick: {
+					show: true,
+					inside: true,
+					length: 2
+				},
+				axisLine: {
+					lineStyle: {
+						color: 'white',
+						fontSize: 8
+					}
+				},
+				axisLabel: {
+					margin: 10,
+					textStyle: {
+						fontSize: 16,
+					}
+				},
+				splitLine: {
+					show: false
+				},
+
+			}, {
+				type: 'value',
+
+				max: 10.0,
+				min: -10.0,
+				interval: 5.0,
+				splitLine: {
+					show: false
+				},
+				axisLine: {
+					lineStyle: {
+						color: 'white',
+						fontSize: 8
+					}
+				},
+				axisTick: {
+					show: true,
+					inside: true,
+					length: 2
+				},
+				axisLabel: {
+					margin: 15,
+					textStyle: {
+						fontSize: 16,
+						align: 'center'
+					}
+				},
+			}],
+
+			series: [{
+				name: '美洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(137,189,27)'
+					}
+				},
+				data: [960.3, 960.4, 907.5, 905.6, 980.1, 940.8, 890.6, 940.1, 800.1, 520.4, 750.8, 940.7]
+			}, {
+				name: '非洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(0,136,212)'
+					}
+				},
+				data: [970.3, 909.2, 909.3, 1000.0, 990.6, 900.6, 800.0, 910.5, 690.8, 670.5, 900.4, 840.9]
+			}, {
+				name: '大洋洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(219,50,251)'
+					}
+				},
+				data: [840.2, 801.0, 607.5, 702.1, 430.7, 808.5, 901.9, 101.8, 790.7, 870.6, 920.9, 0]
+			}, {
+				name: '亚洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(243,140,61)'
+					}
+				},
+				data: [840.2, 810.0, 607.5, 702.1, 403.7, 880.5, 901.9, 101.8, 709.7, 807.6, 902.9, 0]
+			}, {
+				name: '欧洲',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(128,171,204)'
+					}
+				},
+				data: [804.2, 801.0, 607.5, 700.1, 403.7, 808.5, 901.9, 101.8, 790.7, 807.6, 902.9, 0]
+			}, ]
+		};
+		mapdivhe3.setOption(option);
+
+		var maploudou = echarts.init(document.querySelector('.world-he4'));
+		var option = {
+			backgroundColor: '#6a7889',
+			width: '90%',
+			height: '65%',
+			title: {
+
+				text: '热销产品漏斗图',
+				left: '2%',
+				top: '3%',
+				textStyle: {
+					fontSize: 13,
+					color: 'white',
+					fontFamily: '宋体',
+					fontWeight: 'normal',
+				}
+			},
+			legend: {
+				data: ['展现', '访问', '邮件', '咨询', '成交'],
+				right: '6%',
+				itemWidth: 20,
+				top: '3%',
+				itemHeight: 10,
+				itemGap: 3,
+				textStyle: {
+					fontSize: 8,
+					fontFamily: '宋体',
+					fontWeight: 'normal',
+					color: 'white'
+				}
+			},
+			tooltip: {
+				trigger: 'item',
+				formatter: "{a} <br/>{b} : {c}%"
+			},
+			series: [{
+					name: '预期',
+					type: 'funnel',
+					left: '25%',
+					width: '50%',
+					height: '60%',
+					top: '30%',
+					label: {
+						normal: {
+							formatter: '{b}预期',
+							textStyle: {
+								fontSize: 8,
+								fontWeight: 'normal',
+								fontFamily: '宋体',
+								color: 'white'
+							}
+						},
+						emphasis: {
+							position: 'inside',
+							formatter: '{b}预期: {c}%',
+							textStyle: {
+								fontSize: 8,
+								fontWeight: 'normal',
+								fontFamily: '宋体',
+							}
+						}
+					},
+					labelLine: {
+						normal: {
+							show: false
+						}
+					},
+					itemStyle: {
+						normal: {
+							opacity: 0.7
+						}
+					},
+					data: [{
+							value: 60,
+							name: '邮件',
+							itemStyle: {
+								normal: {
+									color: '#a89028'
+								}
+							}
+
+						},
+						{
+							value: 80,
+							name: '访问',
+							itemStyle: {
+								normal: {
+									color: '#aa752e'
+								}
+							}
+						},
+						{
+							value: 100,
+							name: '展现',
+							itemStyle: {
+								normal: {
+									color: '#18695a'
+								}
+							}
+						},
+						{
+							value: 40,
+							name: '咨询',
+							itemStyle: {
+								normal: {
+									color: '#5a7041'
+								}
+							}
+						},
+						{
+							value: 20,
+							name: '成交',
+							itemStyle: {
+								normal: {
+									color: '#b62c30'
+								}
+							}
+						}
+					]
+				},
+				{
+					name: '实际',
+					type: 'funnel',
+					left: '25%',
+					width: '50%',
+					height: '60%',
+					top: '30%',
+					maxSize: '80%',
+					label: {
+						normal: {
+							position: 'inside',
+							formatter: '{c}%',
+							textStyle: {
+								color: '#fff',
+								fontSize: 8,
+								fontFamily: '宋体',
+								fontWeight: 'normal',
+							}
+						},
+						emphasis: {
+							position: 'inside',
+							formatter: '{c}%'
+						}
+					},
+					itemStyle: {
+						normal: {
+							opacity: 0.5,
+							borderColor: '#fff',
+							borderWidth: 2
+						}
+					},
+					data: [{
+							value: 30,
+							name: '邮件',
+							itemStyle: {
+								normal: {
+									color: '#b5a617'
+								}
+							}
+						},
+						{
+							value: 10,
+							name: '咨询',
+							itemStyle: {
+								normal: {
+									color: '#5f7439'
+								}
+							}
+						},
+						{
+							value: 5,
+							name: '成交',
+							itemStyle: {
+								normal: {
+									color: '#c62022'
+								}
+							}
+						},
+						{
+							value: 50,
+							name: '访问',
+							itemStyle: {
+								normal: {
+									color: '#cf6b16'
+								}
+							}
+						},
+						{
+							value: 80,
+							name: '展现',
+							itemStyle: {
+								normal: {
+									color: '#0c6944'
+								}
+							}
+						}
+					]
+				}
+			]
+		};
+		maploudou.setOption(option);
+
+		var maploudou1 = echarts.init(document.querySelector('.div-he4'));
+		var option = {
+			backgroundColor: '#3e61aa',
+			width: '90%',
+			height: '65%',
+			title: {
+
+				text: '热销产品漏斗图',
+				left: '2%',
+				top: '3%',
+				textStyle: {
+					fontSize: 25,
+					color: 'white',
+					fontFamily: '宋体',
+					fontWeight: 'normal',
+				}
+			},
+			legend: {
+				data: ['展现', '访问', '邮件', '咨询', '成交'],
+				right: '6%',
+				itemWidth: 20,
+				top: '3%',
+				itemHeight: 10,
+				itemGap: 3,
+				textStyle: {
+					fontSize: 20,
+					fontWeight: 'normal',
+					color: 'white',
+					fontFamily: '宋体',
+				}
+			},
+			tooltip: {
+				trigger: 'item',
+				formatter: "{a} <br/>{b} : {c}%"
+			},
+			series: [{
+					name: '预期',
+					type: 'funnel',
+					left: '25%',
+					width: '50%',
+					height: '60%',
+					top: '30%',
+					label: {
+						normal: {
+							formatter: '{b}预期',
+							textStyle: {
+								fontSize: 20,
+								fontWeight: 'normal',
+								fontFamily: '宋体',
+								color: 'white'
+							}
+						},
+						emphasis: {
+							position: 'inside',
+							formatter: '{b}预期: {c}%'
+						}
+					},
+					labelLine: {
+						normal: {
+							show: false
+						}
+					},
+					itemStyle: {
+						normal: {
+							opacity: 0.7
+						}
+					},
+					data: [{
+							value: 60,
+							name: '邮件',
+							itemStyle: {
+								normal: {
+									color: '#a89028'
+								}
+							}
+
+						},
+						{
+							value: 80,
+							name: '访问',
+							itemStyle: {
+								normal: {
+									color: '#aa752e'
+								}
+							}
+						},
+						{
+							value: 100,
+							name: '展现',
+							itemStyle: {
+								normal: {
+									color: '#18695a'
+								}
+							}
+						},
+						{
+							value: 40,
+							name: '咨询',
+							itemStyle: {
+								normal: {
+									color: '#5a7041'
+								}
+							}
+						},
+						{
+							value: 20,
+							name: '成交',
+							itemStyle: {
+								normal: {
+									color: '#b62c30'
+								}
+							}
+						}
+					]
+				},
+				{
+					name: '实际',
+					type: 'funnel',
+					left: '25%',
+					width: '50%',
+					height: '60%',
+					top: '30%',
+					maxSize: '80%',
+					label: {
+						normal: {
+							position: 'inside',
+							formatter: '{c}%',
+							textStyle: {
+								color: '#fff',
+								fontSize: 20,
+								fontFamily: '宋体',
+								fontWeight: 'normal',
+							}
+						},
+						emphasis: {
+							position: 'inside',
+							formatter: '{c}%'
+						}
+					},
+					itemStyle: {
+						normal: {
+							opacity: 0.5,
+							borderColor: '#fff',
+							borderWidth: 2
+						}
+					},
+					data: [{
+							value: 30,
+							name: '邮件',
+							itemStyle: {
+								normal: {
+									color: '#b5a617'
+								}
+							}
+						},
+						{
+							value: 10,
+							name: '咨询',
+							itemStyle: {
+								normal: {
+									color: '#5f7439'
+								}
+							}
+						},
+						{
+							value: 5,
+							name: '成交',
+							itemStyle: {
+								normal: {
+									color: '#c62022'
+								}
+							}
+						},
+						{
+							value: 50,
+							name: '访问',
+							itemStyle: {
+								normal: {
+									color: '#cf6b16'
+								}
+							}
+						},
+						{
+							value: 80,
+							name: '展现',
+							itemStyle: {
+								normal: {
+									color: '#0c6944'
+								}
+							}
+						}
+					]
+				}
+			],
+
+		};
+		maploudou1.setOption(option);
+
+		$(".fangda1").click(function() {
+			$(".ling1").css('display', 'block')
+			$(".gai").css("display", "block")
+		})
+		$(".fangxiao1").click(function() {
+			$(".ling1").css('display', 'none')
+			$(".gai").css("display", "none")
+		})
+
+		$(".fangda2").click(function() {
+			$(".ling2").css('display', 'block')
+			$(".gai").css("display", "block")
+		})
+		$(".fangxiao2").click(function() {
+			$(".gai").css("display", "none")
+			$(".ling2").css('display', 'none')
+		})
+
+		$(".fangda3").click(function() {
+			$(".ling3").css('display', 'block')
+			$(".gai").css("display", "block")
+
+		})
+		$(".fangxiao3").click(function() {
+			$(".gai").css("display", "none")
+			$(".ling3").css('display', 'none')
+		})
+
+		$(".fangda4").click(function() {
+			$(".ling4").css('display', 'block')
+			$(".gai").css("display", "block")
+
+		})
+		$(".fangxiao4").click(function() {
+			$(".gai").css("display", "none")
+			$(".ling4").css('display', 'none')
+		})
+	</script>
+
+</html>

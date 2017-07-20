@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/country_of_buyer.min.css" />
+		<script type="text/javascript" src="js/jquery-2.1.0.min.js" ></script>
+		<script type="text/javascript" src="js/echarts.min.js" ></script>
+		<script type="text/javascript" src="js/world.js" ></script>
+		<script type="text/javascript" src="js/map.js" ></script>
+		<script type="text/javascript" src="js/country_of_buyer.js" ></script>
+		<style type="text/css">
+			body{
+				position: relative;
+			}
+			.ok{
+				 position: absolute;
+				 left:-4%;
+				 top:5%;
+				 transition: all 1s; 
+			}
+			.ok:hover{
+				position: absolute;
+				 left:0;
+				 top:5%;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="bg">
+			<div class="menban"></div>
+			
+			<div class="top">
+			<p class="left">
+				<span class="span1">2017年7月14日 星期五</span>
+				<span class="span2">10:01</span>
+				<span class="span3">天气：晴转多云</span>
+			</p>
+			<p class="mid">北方跨境电商大数据中心</p>
+			<p class="right">系统通知：消防系统紧急演练，时间07/10</p>
+		</div>
+			<div class="box">
+				<div id="main"></div>
+				<span class="map_title">2017年采购商主要国家走势图</span>
+				<div class="box_big"><div id="box1"></div><img src="img/da.png" class="fangda fangda1"> </div>
+				<div class="box_big"><div id="box2"></div><img src="img/da.png" class="fangda fangda2"></div>
+				<div class="box_big"><div id="box3"></div><img src="img/da.png" class="fangda fangda3"></div>
+				<div class="box_big"><div id="box4"></div><img src="img/da.png" class="fangda fangda4"></div>
+			</div>
+			<div class="footer">
+			<span>京公网安备 11000002000088号</span>|
+			<span>京ICP证070359号|互联网药品信息服务资格证编号（京）-经营性-2014-0008</span>|
+			<span>新出发京零字第大12007号</span>
+		</div>
+			<div class="box_small"><div class="box_motai" id='box1_big'></div><img src='img/fangxiao.png'></div>
+			<div class="box_small"><div class="box_motai" id='box2_big'></div><img src='img/fangxiao.png'></div>
+			<div class="box_small"><div class="box_motai" id='box3_big'></div><img src='img/fangxiao.png'></div>
+			<div class="box_small"><div class="box_motai" id='box4_big'></div><img src='img/fangxiao.png'></div>
+		</div>
+		 <div class="ok"><a href="../index.html"><img src="img/yy.png"/></a></div>
+	</body>
+</html>

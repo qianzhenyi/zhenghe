@@ -1,0 +1,270 @@
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	width:100%;
+	height:100%;
+}
+.detail_01{
+	width:100%;
+	height:100%;
+	background:url(../img/1.jpg) no-repeat;
+	background-size:cover;
+}
+.detail_01_cantainer{
+	width:1100px;
+	height:100%;
+	margin:0 auto;
+	/*margin-left: 89px;
+	margin-right: 89px;*/
+/*	background:red;*/
+}
+.detail_01_top{
+	width:100%;
+	height:55px;
+	/*background:white;*/
+}
+.detail_top_left{
+	width:250px;
+	height:100%;
+	float:left;
+	margin-left:80px;
+	/*background:red;*/
+}
+.detail_top_left li{
+	list-style:none;
+	float:left;
+	height:100%;
+	color:#cdcfd2;
+	font-size:12px;
+	line-height:55px;
+	margin-left:5px;
+}
+.detail_top_left li:nth-child(1){
+	margin-left:0;
+}
+.detail_top_cantner{
+	width:260px;
+	height:100%;
+	float:left;
+	font-size:18px;
+	color:#cdcfd2;
+	line-height:55px;
+	margin-left:125px;
+}
+.detail_top_right{
+	width:250px;
+	height:100%;
+	float:right;
+	margin-right:80px;
+	color:#cdcfd2;
+	font-size:12px;
+	line-height:55px;
+}
+.detail_01_left{
+	width:280px;
+	height:522px;
+	float:left;
+	margin-top:20px;
+	font-family:宋体;
+	/*background:yellow;*/
+}
+.detail_left01{
+	width:100%;
+	height:325px;
+	color:#cdcfd2;
+	font-size:15px;
+	text-align:left;
+	line-height:35px;
+}
+.detail_left02{
+	width:260px;
+	height:84px;
+	float:left;
+	color:#cdcfd2;
+	margin-top:80px;
+}
+.Russia{
+	width:140px;
+	float:left;
+	font-size:40px;
+	text-align:left;
+	line-height:80px;
+}
+.national_flag{
+	width:117px;
+	height:100%;
+	float:right;
+}
+.national_flag span{
+	width:100%;
+	height:28px;
+	float:left;
+}
+.national_flag span:nth-child(1){
+	background:white;
+}
+.national_flag span:nth-child(2){
+	background:#173f91;
+}
+.national_flag span:nth-child(3){
+	background:#c92c27;
+}
+.detail_01_right{
+	width:700px;
+	height:522px;
+	float:right;
+	margin-top:20px;
+	/*background:yellow;*/
+}
+.detail_01_right_biaoti{
+	width:100%;
+	height:55px;
+	font-size:18px;
+	text-align:left;
+	color:#cdcfd2;
+	/*background:yellowgreen;*/
+}
+.detail01_right_shuju{
+	width:100%;
+	height:190px;
+	/*background:yellow;*/
+}
+.detail01_right_shuju li{
+	width:167px;
+	height:97px;
+	float:left;
+	margin-left:9px;
+	list-style:none;
+	border-radius:7px;
+	border-left:1px solid #b0b0b0;
+	border-bottom:1px solid #b0b0b0;
+}
+.detail01_right_shuju li:nth-child(1){
+	margin-left:0;
+}
+.detail01_right_shuju li:nth-child(5){
+	margin-left:0;
+	margin-top:10px;
+}
+.detail01_right_shuju li:nth-child(6){
+	margin-top:10px;
+}
+.detail01_right_shuju li:nth-child(7){
+	margin-top:10px;
+}
+.detail01_right_span01{
+	width:100%;
+	height:32px;
+	float:left;
+	border-radius:7px 7px 0 0;
+	background:#e16565;
+	border-bottom:1px solid #f4c5c5;
+}
+.detail01_right_span02{
+	width:100%;
+	height:32px;
+	float:left;
+	/*border-radius:0 0 7px 7px;*/
+	background:white;
+}
+.detail01_right_span03{
+	width:100%;
+	height:32px;
+	float:left;
+	border-radius:0 0 7px 7px;
+	background:white;
+}
+.span_text01{
+	text-align:center;
+	line-height:25px;
+	color:white;
+	font-size:14px;
+}
+.span_text02{
+	text-align: center;
+	line-height:25px;
+	color:black;
+	font-size:14px;
+}
+.detail_01_right_biaoti2{
+	width:100%;
+	height:40px;
+	float:left;
+	font-size:18px;
+	text-align:left;
+	color:#cdcfd2;
+	margin-top:40px;
+}
+.detail01_right_shuju2{
+	width:100%;
+	height:164px;
+}
+.detail01_right_shuju2 li{
+	width:233px;
+	height:70px;
+	float:left;
+	margin-left:9px;
+	list-style:none;
+	border-radius:7px;
+	border-top:1px solid #d6a4aa;
+	border-left:1px solid #b6c1cf;
+	border-bottom:1px solid #b0b0b0;
+}
+.detail01_right_span04{
+	width:100%;
+	height:34.5px;
+	float:left;
+	border-radius:7px 7px 0 0;
+	background:#e16565;
+	border-bottom:1px solid #ea9595;
+}
+.detail01_right_span05{
+	width:100%;
+	height:34.5px;
+	float:left;
+	border-radius:0 0 7px 7px;
+	background:white;
+}
+.span_text03{
+	font-size:14px;
+	color:white;
+	line-height:34.5px;
+	text-align:center;
+}
+.span_text04{
+	font-size:14px;
+	color:black;
+	line-height:34.5px;
+	text-align:center;
+}
+.detail01_right_shuju2 li:nth-child(1){
+	margin-left:0;
+}
+.detail01_right_shuju2 li:nth-child(3){
+	margin-left:0;
+	margin-top:10px;
+}
+.detail01_right_shuju2 li:nth-child(4){
+	margin-top:10px;
+}
+.detail_01_foot{
+	width:760px;
+	height:40px;
+	float:left;
+	margin-left:16%;
+	margin-bottom:0;
+	/*background:yellow;*/
+}
+.detail_01_foot li{
+	list-style:none;
+	float:left;
+	font-size:12px;
+	color:white;
+	line-height:40px;
+	margin-left:10px;
+}
+.detail_01_foot li:nth-child(1){
+	margin-left:0;
+}
