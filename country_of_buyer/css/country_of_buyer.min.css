@@ -22,12 +22,13 @@ html {
 .menban {
 	height: 100%;
 	width: 100%;
-	background: rgba(0, 0, 0, 0.4);
+	background: black;
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 10;
-	display: none
+	display: none;
+	opacity: 0;
 }
 
 .bg {
@@ -70,7 +71,6 @@ html {
 	width: 100%;
 	position: relative
 }
-
 #main {
 	height: 100%;
 	width: 65%;
@@ -122,20 +122,36 @@ html {
 }
 
 .box_small {
-	height: 390px;
-	width: 920px;
-	position: absolute;
+	height: 0;
+	width: 0;
+	position: fixed;
+	z-index: 20;
 	left: 50%;
 	top: 50%;
-	z-index: 20;
 	background: #3e61aa;
 	-moz-transform: translate(-50%, -50%);
 	-o-transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
-	z-index: -1
+	opacity: 0;
+	display: none;
 }
-
+.box_small1{
+	left: 97%;
+	top: 9%;
+}
+.box_small2{
+	left: 97%;
+	top: 31%;
+}
+.box_small3{
+	left: 97%;
+	top: 53%;
+}
+.box_small4{
+	left: 97%;
+	top: 75%;
+}
 .box_motai {
 	height: 100%;
 	width: 98%;

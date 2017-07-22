@@ -81,6 +81,7 @@ header>div:nth-child(2) {
 	background: #4C5864;
 	border-radius: 4px;
 	display: block;
+	position: relative;
 }
 
 .chart_top {
@@ -187,6 +188,7 @@ header>div:nth-child(2) {
 	height: 100%;
 	background: #4C5864;
 	border-radius: 4px;
+	position: relative;
 }
 
 .lpie {
@@ -208,15 +210,17 @@ header>div:nth-child(2) {
 	background: #4C5864;
 	border-radius: 4px;
 	position: relative;
+	overflow: hidden;
 }
 
 .center_chart_left {
 	margin-right: 6%;
 }
 
-.center_chart>div p {
+.center_chart>div>p {
 	text-align: center;
 	padding: 3px;
+
 }
 
 .center_chart>div span {
@@ -227,8 +231,12 @@ header>div:nth-child(2) {
 	float: right;
 	margin-right: 6px;
 	margin-bottom: 4px;
+	animation:move1 3s linear infinite;
 }
-
+@keyframes move1{
+	from{margin-bottom: 4px;}
+	to{margin-bottom: 0px;}
+}
 .center_chart>div i {
 	height: 0;
 	width: 0;
@@ -236,67 +244,90 @@ header>div:nth-child(2) {
 	border-top-color: green;
 	float: right;
 	margin-right: 6px;
-	margin-top: 8px;
+	margin-top: 6px;
+	animation:move2 3s linear infinite;
+}
+@keyframes move2{
+	from{margin-top: 6px;}
+	to{margin-top: 1px;}
 }
 
-.center_chart>div table {
-	width: 100%;
+.tbletitle{
+	height: 12%;
+	border-left: 7px solid #AAABAB;
+	margin-bottom: 1%;
+}
+.tbletitle>p{
+	float: left;
+	
 	height: 100%;
-	border-collapse: collapse;
-	padding-left: 2px;
+	text-align: center;
+	font-size: 12px;
+	height: 100%;
+	padding: 5px 0;
+	
 }
-
-.center_chart>div table tr:nth-child(1) {
-	height: 15%;
-	width: 100%;
-	display: inline-block;
-	border: none;
-}
-
-.center_chart>div table tr:nth-child(2) {
-	border-left: 6px solid #E23A0F;
-}
-
-.center_chart>div table tr:nth-child(1) th:nth-child(1) {
+.tbletitle>p:nth-child(1) {
 	background: #71A5BD;
-	width: 27%;
-	height: 100%;
+	width: 26%;
 	text-align: center;
-	border-left: 6px solid #AAABAB;
+	
 }
 
-.center_chart>div table tr:nth-child(1) th:nth-child(2) {
+.tbletitle>p:nth-child(2) {
 	background: #C093A7;
-	width: 30%;
-	text-align: center;
+	width:32%;
 }
 
-.center_chart>div table tr:nth-child(1) th:nth-child(3) {
+.tbletitle>p:nth-child(3) {
 	background: #B54C7D;
-	width: 30%;
-	text-align: center;
+	width:24%;
 }
 
-.center_chart>div table tr:nth-child(1) th:nth-child(4) {
+.tbletitle>p:nth-child(4) {
 	background: #B54C7D;
-	text-align: center;
-	width: 10%;
+	width: 18%;
 	border-left: 1px solid gainsboro;
 }
-
-.center_chart>div tr {
+.tble{
 	width: 100%;
-	height: 10%;
-	font-size: 12px;
-	background: dimgray;
-	margin: 5px 0;
-	display: block;
-	border-left: 6px solid #AAABAB;
+	border-collapse: collapse;
+	padding-left: 2px;
+	position: absolute;
+	top:1%;
+	left: 0;
 }
 
+.tble tr:hover{
+	transform: scale(1.1);
+	color: yellow;
+}
+
+.tble_red{
+	border-left: 6px solid #E23A0F!important;
+}
+.tble tr td:nth-child(1) {
+	margin-left: 2px;
+}
+.tble tr {
+	width: 100%;
+	height: 17%;
+	font-size: 12px;
+	margin: 9px 0;
+	display: block;
+	border-left: 6px solid #AAABAB;
+	position: relative;
+}
+.tble-wrap{
+	width: 100%;
+	height: 70%;
+	overflow: hidden;
+	position: relative;
+	
+}
 .center_chart>div td {
-	width: 34%;
-	height: 20%;
+	width: 35%;
+	height: 100%;
 	font-size: 12px;
 	background: #5D6B6E;
 }
@@ -369,8 +400,23 @@ header>div:nth-child(2) {
 	margin-bottom: 1%;
 }
 
-.map,.chart_top,.chart_bottom,.left_pie,.center_chart_left,.center_chart_right,.right_trade>div{
+.map,.chart_top,.left_pie,.center_chart_left,.center_chart_right,.right_trade>div{
 	cursor: pointer;
+}
+
+
+.more{
+	color: cornflowerblue;
+	font-size: 12px;
+	position: absolute;
+	bottom:20px;
+	right: 40px;
+	text-decoration: underline;
+}
+
+.chart_bottom-more{
+	right: 10px;
+	bottom: 10px;
 }
 /***********************footer*********************************/
 

@@ -11,7 +11,7 @@
 			}
 			.ok{
 				 position: absolute;
-				 left:-4.7%;
+				 left:-5%;
 				 top:5%;
 				 transition: all 1s; 
 			}
@@ -282,11 +282,11 @@
 			  		  biaoge.innerHTML=yuan;
 			  	}else{
 			  		
-			  	for(var j=0;j<tr.length;j++){
-			  		console.log(j)
+			  	for(var j=1;j<tr.length;j++){
+			  	  if(j!=17){
 			  		var k=Math.floor(Math.random()*(this.index+1));
 				   tr[j].innerHTML="<td>"+arra[k]+"</td><td>"+arrb[k]+"</td><td>"+arrc[k]+"</td><td>归档</td>";
-		     
+		      }
 			  	}
 			}
 			  }

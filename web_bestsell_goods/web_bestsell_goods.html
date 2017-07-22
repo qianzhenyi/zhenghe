@@ -10,7 +10,7 @@
 			}
 			.ok{
 				 position: absolute;
-				 left:-4.7%;
+				 left:-5%;
 				 top:5%;
 				 transition: all 1s; 
 			}
@@ -175,26 +175,25 @@
 			}
 			
 			.ling1 {
-				width: 60%;
-				height: 60%;
+				width: 0%;
+				height: 0%;
 				background: #3e61aa;
 				position: absolute;
-				top: 25%;
-				left: 20%;
-				display: none;
+				top: 10%;
+				right: 10%;
+				/*display: none;*/
 				z-index: 100;
 			}
 			
 			.div-he1 {
 				width: 770px;
-				height: 390px;
+				height: 390px;display: none;
 				float: left;
-				position: absolute;
 			}
 			
 			.fangxiao1 {
 				float: right;
-				margin-top: 1%;
+				margin-top: 1%;display: none;
 			}
 			
 			.fangxiao1:hover {
@@ -202,25 +201,25 @@
 			}
 			
 			.ling2 {
-				width: 60%;
-				height: 60%;
+				width: 0%;
+				height: 0%;
 				background: #3e61aa;
-				left: 20%;
+				right: 20%;
 				position: absolute;
-				top: 25%;
-				display: none;
+				top: 30%;
+				/*display: none;*/
 				z-index: 100;
 			}
 			
 			.div-he2 {
 				width: 770px;
 				height: 390px;
-				float: left;
+				float: left;display: none;
 			}
 			
 			.fangxiao2 {
 				float: right;
-				margin-top: 1%;
+				margin-top: 1%;display: none;
 			}
 			
 			.fangxiao2:hover {
@@ -228,13 +227,13 @@
 			}
 			
 			.ling3 {
-				width: 60%;
-				height: 60%;
+				width: 0%;
+				height: 0%;
 				background: #3e61aa;
-				left: 20%;
+				right: 20%;
 				position: absolute;
-				top: 25%;
-				display: none;
+				top: 55%;
+				/*display: none;*/
 				z-index: 100;
 			}
 			
@@ -242,12 +241,12 @@
 				;
 				width: 770px;
 				height: 390px;
-				float: left;
+				float: left;display: none;
 			}
 			
 			.fangxiao3 {
 				float: right;
-				margin-top: 1%;
+				margin-top: 1%;display: none;
 			}
 			
 			.fangxiao3:hover {
@@ -255,25 +254,25 @@
 			}
 			
 			.ling4 {
-				width: 60%;
-				height: 60%;
+				width: 0%;
+				height: 0%;
 				background: #3e61aa;
-				left: 20%;
+				right: 20%;
 				position: absolute;
-				top: 25%;
-				display: none;
+				top: 75%;
+				/*display: none;*/
 				z-index: 100;
 			}
 			
 			.div-he4 {
-				width: 770px;
+				width: 790px;
 				height: 390px;
-				float: left;
+				float: left;display: none;
 			}
 			
 			.fangxiao4 {
 				float: right;
-				margin-top: 1%;
+				margin-top: 1%;display: none;
 			}
 			
 			.fangxiao4:hover {
@@ -395,129 +394,55 @@
 		};
 		//value  可控制光点大小
 		var BJData = [
-			[{
-				name: '中国'
-			}, {
-				name: '日本',
-				value: 60
-			}],
-			[{
-				name: '中国'
-			}, {
-				name: '印度',
-				value: 60
-			}],
-			[{
-				name: '中国'
-			}, {
-				name: '澳大利亚',
-				value: 60
-			}],
-			[{
-				name: '中国'
-			}, {
-				name: '马来西亚',
-				value: 60
-			}],
-			[{
-				name: '中国'
-			}, {
-				name: '俄罗斯',
-				value: 60
-			}],
-			[{
-				name: '中国'
-			}, {
-				name: '美国',
-				value: 60
-			}],
-			[{
-				name: '中国'
-			}, {
-				name: '墨西哥',
-				value: 60
-			}],
-			[{
-				name: '中国'
-			}, {
-				name: '巴西',
-				value: 60
-			}],
-			[{
-				name: '中国'
-			}, {
-				name: '西班牙',
-				value: 60
-			}],
-			[{
-				name: '中国'
-			}, {
-				name: '法国',
-				value: 60
-			}],
-			[{
-				name: '中国'
-			}, {
-				name: '德国',
-				value: 60
-			}],
-			[{
-				name: '中国'
-			}, {
-				name: '英国',
-				value: 60
-			}],
-			[{
-				name: '中国'
-			}, {
-				name: '意大利',
-				value: 60
-			}],
-			[{
-				name: '中国'
-			}, {
-				name: '中国',
-				value: 60
-			}],
-			[{
-				name: '中国'
-			}, {
-				name: '韩国',
-				value: 60
-			}],
+			[{name: '中国'},{name: '日本',value: 60}],
+			[{name: '中国'}, {name: '印度',value: 60}],
+			[{name: '中国'}, {name: '澳大利亚',value: 60}],
+			[{name: '中国'}, {name: '马来西亚',value: 60}],
+			[{name: '中国'}, {name: '俄罗斯',value: 60}],
+			[{name: '中国'}, {name: '美国',value: 60}],
+			[{name: '中国'}, {name: '墨西哥',value: 60}],
+			[{name: '中国'}, {name: '巴西',value: 60}],
+			[{name: '中国'}, {name: '西班牙',value: 60}],
+			[{name: '中国'}, {name: '法国',value: 60}],
+			[{name: '中国'}, {name: '德国',value: 60}],
+			[{name: '中国'}, {name: '英国',value: 60}],
+			[{name: '中国'}, {name: '意大利',value: 60}],
+			[{name: '中国'}, {name: '中国',value: 60}],
+			[{name: '中国'}, {name: '韩国',value: 60}],
 		];
-		var convertData = function(data) {
-			var res = [];
-			for(var i = 0; i < data.length; i++) {
-				var dataItem = data[i];
-				var fromCoord = geoCoordMap[dataItem[0].name];
-				var toCoord = geoCoordMap[dataItem[1].name];
-				if(fromCoord && toCoord) {
-					res.push({
-						fromName: dataItem[0].name,
-						toName: dataItem[1].name,
-						coords: [fromCoord, toCoord]
-					});
-				}
-			}
-			return res;
-		};
 		var color = ['#fdd442'];
+//		var convertData = function(data) {
+//			var res = [];
+//			for(var i = 0; i < data.length; i++) {
+//				var dataItem = data[i];
+//				var fromCoord = geoCoordMap[dataItem[0].name];
+//				var toCoord = geoCoordMap[dataItem[1].name];
+//				if(fromCoord && toCoord) {
+//					res.push({
+//						fromName: dataItem[0].name,
+//						toName: dataItem[1].name,
+//						coords: [fromCoord, toCoord]
+//					});
+//				}
+//			}
+//			return res;
+//		};
+		
 		var series = [];
 		[
 			['中国', BJData]
 		].forEach(function(item, i) {
 			series.push({
-
 				name: '贸易' + ' Top15',
 				type: 'effectScatter',
 				coordinateSystem: 'geo',
 				zlevel: 2,
+				//闪点样式
 				rippleEffect: {
 					brushType: 'stroke'
 				},
 				label: {
-					//地名
+					//地名，
 					normal: {
 						show: false,
 						position: 'right',
@@ -548,7 +473,9 @@
 			backgroundColor: '',
 			title: {
 				//标题
-				text: '2017年6月28日网络热销产品走势图',
+				text: '2017年6月28日网络热销产品走势图',//正标题
+//				subtext:'hello world',副标题
+//              itemGap:'30',主副标题之间的间距
 				left: 'center',
 				top: '15%',
 				textStyle: {
@@ -564,12 +491,13 @@
 			geo: {
 				map: 'world',
 				top: '35%',
+				//鼠标移至国家地区显示各国家地区名
 				label: {
 					emphasis: {
 						show: false
 					}
 				},
-				//地图可否拖动
+				//地图可否拖动及放大缩小
 				roam: false,
 				itemStyle: {
 					normal: {
@@ -636,7 +564,6 @@
 				boundaryGap: true,
 				axisLabel: {
 					interval: 0
-
 				},
 				axisTick: {
 					show: false,
@@ -679,9 +606,6 @@
 				splitLine: {
 					show: false
 				},
-
-				//      data: ['400','','800','','1200','','1600']
-
 			}],
 			series: [{
 				name: '美洲',
@@ -701,8 +625,6 @@
 							offset: 0.8,
 							color: 'rgba(0, 0, 0, 0)'
 						}], false),
-						//						shadowColor: 'rgba(0, 0, 0, 0.1)',
-						//						shadowBlur: 10
 					}
 				},
 				itemStyle: {
@@ -2494,41 +2416,217 @@
 		maploudou1.setOption(option);
 
 		$(".fangda1").click(function() {
-			$(".ling1").css('display', 'block')
+			$('.ling1').animate(
+				{'width': '60%',
+				'height': '60%',
+				'background': '#3e61aa',
+//				'left': '20%',
+                'right':'20%',
+				'position': 'absolute',
+				'top': '25%',
+				'display': 'block',
+				'z-index': '110'}
+			)
+			
+			$('.div-he1').css({
+				'width': '770px',
+				'height': '390px',
+				'float': 'left','display':'block'
+			})
+//			
+			$('.fangxiao1 ').css({
+				'float': 'right',
+				'margin-top': '1%',
+				'display':'block'
+			})
+				
+			
 			$(".gai").css("display", "block")
+		
 		})
 		$(".fangxiao1").click(function() {
-			$(".ling1").css('display', 'none')
+			$('.ling1').animate(
+				{'width': '0%',
+				'height': '0%',
+				'background': '#3e61aa',
+				'right': '10%',
+				'position': 'absolute',
+				'top': '10%','display':'none',
+				'z-index': '110'}
+			)
+			
+			$('.div-he1').css({
+				'width': '770px',
+				'height': '390px',
+				'float': 'left','display':'none'
+			})
+//			
+			$('.fangxiao1 ').css({
+				'float': 'right',
+				'margin-top': '1%',
+				'display':'none'
+			})
 			$(".gai").css("display", "none")
 		})
 
 		$(".fangda2").click(function() {
-			$(".ling2").css('display', 'block')
+			$('.ling2').animate(
+				{'width': '60%',
+				'height': '60%',
+				'background': '#3e61aa',
+//				'left': '20%',
+                'right':'20%',
+				'position': 'absolute',
+				'top': '25%',
+				'display': 'block',
+				'z-index': '110'}
+			)
+			
+			$('.div-he2').css({
+				'width': '770px',
+				'height': '390px',
+				'float': 'left','display':'block'
+			})
+//			
+			$('.fangxiao2 ').css({
+				'float': 'right',
+				'margin-top': '1%',
+				'display':'block'
+			})
+				
 			$(".gai").css("display", "block")
 		})
 		$(".fangxiao2").click(function() {
 			$(".gai").css("display", "none")
-			$(".ling2").css('display', 'none')
+			$('.ling2').animate(
+				{'width': '0%',
+				'height': '0%',
+				'background': '#3e61aa',
+				'right': '10%',
+				'position': 'absolute',
+				'top': '30%','display':'none',
+				'z-index': '110'}
+			)
+			
+			$('.div-he2').css({
+				'width': '770px',
+				'height': '390px',
+				'float': 'left','display':'none'
+			})
+//			
+			$('.fangxiao2 ').css({
+				'float': 'right',
+				'margin-top': '1%',
+				'display':'none'
+			})
 		})
 
 		$(".fangda3").click(function() {
-			$(".ling3").css('display', 'block')
+			$('.ling3').animate(
+				{'width': '60%',
+				'height': '60%',
+				'background': '#3e61aa',
+//				'left': '20%',
+                'right':'20%',
+				'position': 'absolute',
+				'top': '25%',
+				'display': 'block',
+				'z-index': '110'}
+			)
+			
+			$('.div-he3').css({
+				'width': '770px',
+				'height': '390px',
+				'float': 'left','display':'block'
+			})
+//			
+			$('.fangxiao3 ').css({
+				'float': 'right',
+				'margin-top': '1%',
+				'display':'block'
+			})
 			$(".gai").css("display", "block")
 
 		})
 		$(".fangxiao3").click(function() {
 			$(".gai").css("display", "none")
-			$(".ling3").css('display', 'none')
+				$('.ling3').animate(
+				{'width': '0%',
+				'height': '0%',
+				'background': '#3e61aa',
+				'right': '10%',
+				'position': 'absolute',
+				'top': '55%','display':'none',
+				'z-index': '110'}
+			)
+			
+			$('.div-he3').css({
+				'width': '770px',
+				'height': '390px',
+				'float': 'left','display':'none'
+			})
+//			
+			$('.fangxiao3').css({
+				'float': 'right',
+				'margin-top': '1%',
+				'display':'none'
+			})
 		})
+			
 
 		$(".fangda4").click(function() {
-			$(".ling4").css('display', 'block')
+			$('.ling4').animate(
+				{'width': '60%',
+				'height': '60%',
+				'background': '#3e61aa',
+//				'left': '20%',
+                'right':'20%',
+				'position': 'absolute',
+				'top': '25%',
+				'display': 'block',
+				'z-index': '110'}
+			)
+			
+			$('.div-he4').css({
+				'width': '770px',
+				'height': '390px',
+				'float': 'left','display':'block'
+			})
+//			
+			$('.fangxiao4 ').css({
+				'float': 'right',
+				'margin-top': '1%',
+				'display':'block'
+			})
 			$(".gai").css("display", "block")
 
 		})
+			
+
+		
 		$(".fangxiao4").click(function() {
 			$(".gai").css("display", "none")
-			$(".ling4").css('display', 'none')
+				$('.ling4').animate(
+				{'width': '0%',
+				'height': '0%',
+				'background': '#3e61aa',
+				'right': '10%',
+				'position': 'absolute',
+				'top': '75%','display':'none',
+				'z-index': '110'}
+			)
+			
+			$('.div-he4').css({
+				'width': '770px',
+				'height': '390px',
+				'float': 'left','display':'none'
+			})
+//			
+			$('.fangxiao4').css({
+				'float': 'right',
+				'margin-top': '1%',
+				'display':'none'
+			})
 		})
 	</script>
 

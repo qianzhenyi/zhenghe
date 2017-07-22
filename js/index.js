@@ -139,6 +139,8 @@ window.onload = function() {
 			type: 'effectScatter',
 			coordinateSystem: 'geo',
 			zlevel: 2,
+			
+			
 			rippleEffect: {
 				brushType: 'fill',
 				scale:6
@@ -175,7 +177,12 @@ window.onload = function() {
 	option = {
 
 		tooltip: {
-			trigger: 'item'
+				trigger: 'item',
+				height:200,
+				width:200,
+				fontSize:12,
+				formatter: "{a} <br/> {b} <br/>交易量: {c} ",
+			
 		},
 		//地图样式
 		geo: {
@@ -324,7 +331,7 @@ window.onload = function() {
 		},
 		xAxis: [{
 			type: 'category',
-			data: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'],
+			data: ['0', '2', '4', '6', '8', '10', '12', '14', '16', '18', '20', '22', '24'],
 			axisLabel: {
 				textStyle: {
 					color: 'white', //坐标值得具体的颜色
@@ -350,7 +357,7 @@ window.onload = function() {
 			{
 				name: 'xxx',
 				type: 'line',
-				data: [520, 432, 301, 234, 190, 230, 210,520, 432, 401, 234, 490, 230, 410,520, 432, 301, 234, 190, 230, 210, 190, 230, 210],
+				data: [520, 432, 301, 234, 190, 230, 210],
 				symbol: 'none', //拐点样式
 				//symbolSize: 10,//拐点大小
 				itemStyle: {
@@ -364,7 +371,7 @@ window.onload = function() {
 			}, {
 				name: 'xxx',
 				type: 'line',
-				data: [320, 332, 401, 334, 490, 332, 410,420, 332, 332, 534, 590, 530, 510,520, 532, 501, 434, 590, 330, 410, 590, 430, 410],
+				data: [520, 432, 301, 234, 190, 530, 710],
 				symbol: 'none', //拐点样式
 				//symbolSize: 10,//拐点大小
 				itemStyle: {
@@ -378,7 +385,7 @@ window.onload = function() {
 			}, {
 				name: 'xxx',
 				type: 'line',
-				data: [230, 262, 232, 234, 220, 230, 110,132, 132, 101, 134, 90, 30, 230,220, 232, 201, 244, 290, 230, 210, 390, 530, 310],
+				data: [220, 232, 201, 234, 390, 530, 610],
 				symbol: 'none', //拐点样式
 				//symbolSize: 10,//拐点大小
 				itemStyle: {
@@ -399,12 +406,10 @@ window.onload = function() {
 
 	bottomline1.setOption({
 		color: ["white", "red", "tan"],
-		
 		tooltip: {
 			trigger: 'axis',
 			axisPointer: { // 坐标轴指示器，坐标轴触发有效
-				type: 'shadow', // 默认为直线，可选为：'line' | 'shadow'
-
+				type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
 			}
 		},
 		grid: {
@@ -749,52 +754,115 @@ window.onload = function() {
 			
 		}]
 	})
+	
+	//表格上下滚动
+	var tb1=document.querySelector('.tble-left');
+	var tb2=document.querySelector('.tble-right');
+	var step1=0;
+	var step2=0;
+	
+    function fn(){
+    	if(step1==-246)(step1=0);
+    	step1-=3;
+    	tb1.style.top=step1+'px';
+    }
+    function fn2(){
+    	if(step2==-246)(step2=0);
+    	step2-=3;
+    	tb2.style.top=step2+'px';
+    }
+    var t1=setInterval(fn,150);
+	var t2=setInterval(fn2,150);
+	
+	var tr1=document.querySelectorAll('.tble-left tr');
+	var tr2=document.querySelectorAll('.tble-right tr');
+//	for (var i = 0; i < tr1.length; i++) {
+//		for (var j = 0; j < i; j++) {
+//		tr1[i].onmouseover=function(){
+//		clearInterval(t1);
+//	}
+//		tr1[j].onmouseleave=function(){
+//		t1=setInterval(fn,150);
+//		}
+//		
+//		}}
+	function ff(obj,num,count){
+		for (var i = 0; i < obj.length; i++) {
+		for (var j = 0; j < i; j++) {
+		obj[i].onmouseover=function(){
+		clearInterval(num);
+	}
+		obj[j].onmouseleave=function(){
+		num=setInterval(count,150);
+		}
+		
+		}}
+	}
+	
+	ff(tr1,t1,fn);
+	ff(tr2,t2,fn2);
+	
+//	for (var j = 0; j < tr2.length; j++) {
+//  	tr2[j].onmouseover=function(){
+//		clearInterval(t2);
+//	}
+//		tr2[j].onmouseleave=function(){
+//		t2=setInterval(fn,150);
+//	}
+//	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	//各个图表的点击跳转
 	var se1 = document.querySelector(".map"),
 		se2 = document.querySelector(".chart_top"),
-		se3 = document.querySelectorAll(".cline"),
+		se3 = document.querySelector(".cline"),
 		se4 = document.querySelector(".left_pie"),
 		se5 = document.querySelector(".center_chart_left"),
 		se6 = document.querySelector(".center_chart_right"),
 		se7 = document.querySelectorAll(".right_trade>div");
 
-	se1.onclick = function() {
-		window.location.href = "distribution_heat/distribution_heat.html";
-	}
-	se2.onclick = function() {
-		window.location.href = "distribution_heat/mail.html";
-	}
-	se3[0].onclick = function() {
-		window.location.href = "distribution_heat/mail.html";
-	}
-	se3[1].onclick = function() {
-		window.location.href = "distribution_heat/mail.html";
-	}
-	se3[2].onclick = function() {
-		window.location.href = "distribution_heat/mail.html";
-	}
-	
-	se4.onclick = function() {
-		window.location.href = "web_bestsell_goods/web_bestsell_goods.html";
-	}
+//	se1.onclick = function() {
+//		window.location.href = "distribution_heat/distribution_heat.html";
+//	}
+//	se2.onclick = function() {
+//		window.location.href = "distribution_heat/mail.html";
+//	}
+//	se3.onclick = function() {
+//		window.location.href = "distribution_heat/mail.html";
+//	}
+//	se4.onclick = function() {
+//		window.location.href = "web_bestsell_goods/web_bestsell_goods.html";
+//	}
 	se5.onclick = function() {
 		window.location.href = "country_of_buyer/country_of_buyer.html";
 	}
 	se6.onclick = function() {
 		window.location.href = "buyer_of_China/buyer_of_China.html";
 	}
-	se7[0].onclick = function() {
-		window.location.href = "distribution_heat/distribution_heat.html";
-	}
-	se7[1].onclick = function() {
-		window.location.href = "distribution_heat/distribution_heat.html";
-	}
-	se7[2].onclick = function() {
-		window.location.href = "deal_of_ShanDong/deal_of_ShanDong.html";
-	}
-	se7[3].onclick = function() {
-		window.location.href = "deal_of_ShanDong/deal_of_ShanDong.html";
-	}
+//	se7[0].onclick = function() {
+//		window.location.href = "distribution_heat/distribution_heat.html";
+//	}
+//	se7[1].onclick = function() {
+//		window.location.href = "distribution_heat/distribution_heat.html";
+//	}
+//	se7[2].onclick = function() {
+//		window.location.href = "deal_of_ShanDong/deal_of_ShanDong.html";
+//	}
+//	se7[3].onclick = function() {
+//		window.location.href = "deal_of_ShanDong/deal_of_ShanDong.html";
+//	}
 
 }

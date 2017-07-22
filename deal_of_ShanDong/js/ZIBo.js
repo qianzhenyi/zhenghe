@@ -308,8 +308,8 @@ var Zha = echarts.init(document.querySelector('.Zha'));
 		    				position:'top'
 		    			}
 		    		},
-		    		borderWidth:50,
 		    	},
+		    		barWidth:20,
 			   data: [800, 500, 1300, 1500, 1800, 1600, 500, 1600, 1700, 1564, 1780, 1500]
 		    },
 		    {
@@ -327,5 +327,125 @@ var Zha = echarts.init(document.querySelector('.Zha'));
 	}
 	LiangA.setOption(option)
 	
+	
+		var   MoMo =  echarts.init(document.querySelector('.MoMo'));
+	var optionA = {
+		title:{
+ 		text:'2017山东基本数据',
+ 		top:'2%',
+ 		left:'2%',
+ 		textStyle:{
+ 			color:'#dfb050',
+ 			fontSize:20,
+ 		     }
+ 	        },
+		    legend: {
+		        align:'left',
+		        left:'20%',
+		        top:'30%',
+		        orient:'vertical',
+		        data:['GDP','成交量    ','供货量   ','供货量'],
+		        textStyle:{
+		        	color:'#fff',
+		        },
+		        tooltip: {
+			        show: true
+			    }
+		    },
+		    calculable : true,
+		    series : 
+		        {
+		            name:'亿美元',
+		            type:'pie',
+		            radius : '70%',
+		            center : ['60%', '50%'],
+		            roseType : 'area',
+		              label: {
+		                normal: {
+		                    show:true,
+		                    textStyle:{
+		                    	color:'#fff',
+		                    }
+		                },
+		                emphasis: {
+		                    show: true
+		                }
+		            },
+		            labelLine: {
+		                normal: {
+		                    show: false,
+		                    length:4,
+		                },
+		                emphasis: {
+		                    show: true
+		                }
+		            },
+		            
+		            itemStyle: {
+                                normal: {
+							        color: function(params) {
+                                        // build a color map as your need.
+                                        var colorList=[{
+									    type: 'linear',
+									    x: 0,
+									    y: 0,
+									    x2: 1,
+									    y2: 0,
+									    colorStops: [{
+									        offset: 0, color: '#FDBC16' // 0% 处的颜色
+									    }, {
+									        offset: 1, color: '#879560' // 100% 处的颜色
+									    }],
+									    globalCoord: true // 缺省为 false
+									},{
+									    type: 'linear',
+									    x: 0,
+									    y: 0,
+									    x2: 1,
+									    y2: 0,
+									    colorStops: [{
+									        offset: 0, color: 'green' // 0% 处的颜色
+									    }, {
+									        offset: 1, color: 'yellow' // 100% 处的颜色
+									    }],
+									    globalCoord: false // 缺省为 false
+									},{
+									    type: 'linear',
+									    x: 0,
+									    y: 0,
+									    x2: 1,
+									    y2: 0,
+									    colorStops: [{
+									        offset: 0, color: 'silver' // 0% 处的颜色
+									    }, {
+									        offset: 1, color: 'aqua' // 100% 处的颜色
+									    }],
+									    globalCoord: false // 缺省为 false
+									},{
+									    type: 'linear',
+									    x: 0,
+									    y: 0,
+									    x2: 1,
+									    y2: 0,
+									    colorStops: [{
+									        offset: 0, color: '#005789' // 0% 处的颜色
+									    }, {
+									        offset: 1, color: '#399cb8' // 100% 处的颜色
+									    }],
+									    globalCoord: false // 缺省为 false
+									}];
+                                        return colorList[params.dataIndex]
+                                    }
+                               },
+                            },
+		            data:[
+		                {value:10, name:'GDP'},
+		                {value:5, name:'成交量    '},
+		                {value:15, name:'供货量   '},
+		                {value:25, name:'供货量'},
+		            ]
+		        }
+	}
+         MoMo.setOption(optionA)
 })
 

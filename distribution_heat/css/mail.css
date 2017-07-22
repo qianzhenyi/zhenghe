@@ -27,6 +27,8 @@ html{
 .biaoge{
 	/*height:438px;*/
 	overflow: hidden;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 table{
@@ -59,8 +61,9 @@ table .t3,table .t5{
 	color:#7fa83b;
 }
 .ye{
-	width:563px;
-	background:#b72322; ;
+	width:551px;
+	background:#b72322; 
+	margin-left: 20px;
 }
 .biaoge .right{
 	float: right;

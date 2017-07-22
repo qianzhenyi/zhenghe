@@ -6,7 +6,6 @@ html,body{
 body{
 	background:url(../img/bac.png) no-repeat;
 	background-size: cover;
-	/*background-position: right;*/
 }
 .top{
 	position: absolute;
@@ -37,22 +36,6 @@ body{
 	margin-left: 2%;
 	margin-right: 3%;
 }
-/*header{
-	width: 100%;
-	position: relative;
-	padding-top: 20px;
-}
-header p{
-	margin-left: 50px;
-}
-header h1{
-	font-weight: normal;
-	font-family:"宋体";
-	position: absolute;
-	left: 50%;
-	top: 20px;
-	transform: translateX(-50%);
-}*/
 .China_map{
 	width: 700px;
 	height: 600px;
@@ -70,9 +53,6 @@ div.right{
 	width: 100%;
 	height: 24%;
 	margin-bottom: 1%;
-}
-.right section.chart_d{
-	/*height: 200px;*/
 }
 .right .enlarge img{
 	position: absolute;
@@ -98,33 +78,33 @@ div.right{
 	top: 0px;
 }
 .shade_inner{
-	width: 70%;
-	height: 60%;
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	background: red;
+	background: #2f79be;
+	opacity: 0;
 }
 .shade .box{
 	width: 100%;
 	height: 100%;
-	/*width: 900px;
-	height: 500px;
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	margin: auto;*/
 }
 .reduce{
 	position: absolute;
-	left: 86%;
+	left: 82%;
 	top: 22%;
 	cursor: pointer;
-	/*display: none;*/
 }
 .hide{
 	display: none;
+}
+@keyframes move{
+	to{
+		width: 70%;
+		height: 60%;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		opacity: 1;
+	}
+}
+.shade_inner_animate{
+	animation: move 0.5s linear 0s 1 forwards;
 }

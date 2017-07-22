@@ -990,7 +990,8 @@ option = {
   
   
   //big_box1
-  	var myChart = echarts.init(document.getElementById('box1_big'));
+  	function bigbox1(){
+  		var myChart = echarts.init(document.getElementById('box1_big'));
 
 		option = {
     backgroundColor: '#3e61aa',
@@ -1137,10 +1138,12 @@ option = {
 };
   myChart.setOption(option);
   
+  	}
   
   //box2_big
   
-  		var myChart = echarts.init(document.getElementById('box2_big'));
+  	function bigbox2(){
+  			var myChart = echarts.init(document.getElementById('box2_big'));
 
 		option = {
     backgroundColor: '#3e61aa',
@@ -1282,11 +1285,13 @@ option = {
    
 };
   myChart.setOption(option);
+  	}
   
   //box3_big
   
   
-  			var myChart = echarts.init(document.getElementById('box3_big'));
+  function bigbox3(){
+  				var myChart = echarts.init(document.getElementById('box3_big'));
 	option = {
     title : {
         text: '主要国家产品偏好程度(%)',
@@ -1360,11 +1365,13 @@ option = {
 };
   myChart.setOption(option);
   
+  }
   
   //box4_big
   
   
-  
+  function bigbox4(){
+  	
   			var myChart = echarts.init(document.getElementById('box4_big'));
 		option = {
     backgroundColor: '#3e61aa',
@@ -1611,38 +1618,126 @@ option = {
 };
   myChart.setOption(option);
   
+  }
   
   //点击事件
   
   $(".fangda1").click(function(){
-		$(".box_small").css("z-index","-1").eq(0).css("z-index","10");
+  	$(".box_small").eq(0).css("display","block")
+		$(".box_small").eq(0).animate({
+			'opacity':'1',
+			'height':'390px',
+			'width':'920px',
+			'top':'50%',
+			'left':'50%'
+		},300,function(){
+			bigbox1();
+		})
 	});
 	$(".box_small img").eq(0).click(function(){
-		$(".box_small").eq(0).css("z-index","-1");
+		$(".box_small").eq(0).animate({
+			'opacity':'0'
+		},300,function(){
+			$(".box_small").eq(0).css({
+				"display":"none",
+			'height':'0',
+			'width':'0',
+			'top':'9%',
+			'left':'97%'
+				})
+		})
 	});
 	$(".fangda2").click(function(){
-		$(".box_small").css("z-index","-1").eq(1).css("z-index","10");
+		$(".box_small").eq(1).css("display","block")
+		$(".box_small").eq(1).animate({
+			'opacity':'1',
+			'height':'390px',
+			'width':'920px',
+			'top':'50%',
+			'left':'50%'
+		},300,function(){
+			bigbox2()
+		})
 	});
 	$(".box_small img").eq(1).click(function(){
-		$(".box_small").eq(1).css("z-index","-1");
+		$(".box_small").eq(1).animate({
+			'opacity':'0'
+		},300,function(){
+			$(".box_small").eq(1).css({
+				"display":"none",
+			'height':'0',
+			'width':'0',
+			'top':'31%',
+			'left':'97%'
+				})
+		})
 	});
 	$(".fangda3").click(function(){
-		$(".box_small").css("z-index","-1").eq(2).css("z-index","10");
+		$(".box_small").eq(2).css("display","block")
+		$(".box_small").eq(2).animate({
+			'opacity':'1',
+			'height':'390px',
+			'width':'920px',
+			'top':'50%',
+			'left':'50%'
+		},300,function(){
+			bigbox3()
+		})
 	});
 	$(".box_small img").eq(2).click(function(){
-		$(".box_small").eq(2).css("z-index","-1");
+		$(".box_small").eq(2).animate({
+			'opacity':'0'
+		},300,function(){
+			$(".box_small").eq(2).css({
+				"display":"none",
+			'height':'0',
+			'width':'0',
+			'top':'53%',
+			'left':'97%'
+				})
+		})
 	});
 	$(".fangda4").click(function(){
-		$(".box_small").css("z-index","-1").eq(3).css("z-index","10");
+		$(".box_small").eq(3).css("display","block")
+		$(".box_small").eq(3).animate({
+			'opacity':'1',
+			'height':'390px',
+			'width':'920px',
+			'top':'50%',
+			'left':'50%'
+		},300,function(){
+			bigbox4()
+		})
 	});
 	$(".box_small img").eq(3).click(function(){
-		$(".box_small").eq(3).css("z-index","-1");
+		
+		$(".box_small").eq(3).animate({
+			'opacity':'0'
+		},300,function(){
+			$(".box_small").eq(3).css({
+				"display":"none",
+			'height':'0',
+			'width':'0',
+			'top':'75%',
+			'left':'97%'
+				})
+		})
 	});
+	
+	
+	
 	
 	$(".fangda").click(function(){
 		$(".menban").css("display","block")
+		$(".menban").animate({
+			'opacity':'0.4'
+		},300)
 	});
 	$(".box_small img").click(function(){
+		$(".menban").animate({
+			'opacity':'0'
+		},300,function(){
 		$(".menban").css("display","none")
+		})
 	});
 })
