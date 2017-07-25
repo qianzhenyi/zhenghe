@@ -10,41 +10,41 @@ chart.setOption({
 	
      roam: true,
      series: [{
-     	nameMap:
-              {
-             'Russia' : '23.7%',
-             'China':'12',
-             'Japan':'5.3%',
-             'Australia':'1.2%',
-             'India':'4.5%',
-             'Malaysia':'5.8%',
-             'United States of America':'7.5%',
-             'Mexico':'9.5%',
-             'Brazil':'4.4%',
-             'Spain':'9.9%',
-             'France':'3.4%',
-             'Germany':'8.9%',
-             'United Kingdom':'5.6%',
-             'Italy':'9.4%',
-             'South Korea':'7.7%',
-             
-              },
+//   	nameMap:
+//            {
+//           'Russia' : '23.7%',
+//           'China':'12',
+//           'Japan':'5.3%',
+//           'Australia':'1.2%',
+//           'India':'4.5%',
+//           'Malaysia':'5.8%',
+//           'United States of America':'7.5%',
+//           'Mexico':'9.5%',
+//           'Brazil':'4.4%',
+//           'Spain':'9.9%',
+//           'France':'3.4%',
+//           'Germany':'8.9%',
+//           'United Kingdom':'5.6%',
+//           'Italy':'9.4%',
+//           'South Korea':'7.7%',
+//           
+//            },
      data:[
      	{name:'23.7%',itemStyle:{emphasis:{areaColor:'rgb(202,74,75)'},normal:{label:{textStyle:{color:'black',fontSize:'30'}}}}},
-      	{name:'12',itemStyle:{emphasis:{areaColor:'white'},normal:{label:{textStyle:{color:'black',fontSize:'30'}}}}},
-      	{name:'5.3%',itemStyle:{emphasis:{areaColor:'rgb(254,217,138)'},normal:{label:{textStyle:{color:'black'}}}}},
-      	{name:'1.2%',itemStyle:{emphasis:{areaColor:'rgb(202,154,122)'},normal:{label:{textStyle:{color:'black'}}}}},
-      	{name:'4.5',itemStyle:{emphasis:{areaColor:'rgb(254,217,138)'},normal:{label:{textStyle:{color:'black'}}}}},
-      	{name:'5.8',itemStyle:{emphasis:{areaColor:'rgb(223,199,117)'},normal:{label:{textStyle:{color:'black'}}}}},
-      	{name:'7.5%',itemStyle:{emphasis:{areaColor:'rgb(252,242,111)'},normal:{label:{textStyle:{color:'black'}}}}},
-      	{name:'9.5%',itemStyle:{emphasis:{areaColor:'pink'},normal:{label:{textStyle:{color:'black'}}}}},
-      	{name:'4.4%',itemStyle:{emphasis:{areaColor:'yellowgreen'},normal:{label:{textStyle:{color:'black'}}}}},
-      	{name:'9.9%',itemStyle:{emphasis:{areaColor:'teal'},normal:{label:{textStyle:{color:'black'}}}}},
-      	{name:'3.4%',itemStyle:{emphasis:{areaColor:'rgb(8,33,78)'},normal:{label:{textStyle:{color:'black'}}}}},
-      	{name:'8.9%',itemStyle:{emphasis:{areaColor:'rgb(254,217,138)'},normal:{label:{textStyle:{color:'black'}}}}},
-      	{name:'5.6%',itemStyle:{emphasis:{areaColor:'orange'},normal:{label:{textStyle:{color:'black'}}}}},
-      	{name:'9.4%',itemStyle:{emphasis:{areaColor:'pink'},normal:{label:{textStyle:{color:'black'}}}}},
-      	{name:'7.7%',itemStyle:{emphasis:{areaColor:'white'},normal:{label:{textStyle:{color:'black'}}}}},
+      	{name:'',itemStyle:{emphasis:{areaColor:'white'},normal:{label:{textStyle:{color:'black',fontSize:'30'}}}}},
+      	{name:'5.3%',itemStyle:{emphasis:{areaColor:'rgb(254,217,138)'},normal:{label:{textStyle:{color:'black',fontSize:'14'}}}}},
+      	{name:'1.2%',itemStyle:{emphasis:{areaColor:'rgb(202,154,122)'},normal:{label:{textStyle:{color:'black',fontSize:'20'}}}}},
+      	{name:'4.5%',itemStyle:{emphasis:{areaColor:'rgb(254,217,138)'},normal:{label:{textStyle:{color:'black',fontSize:'16'}}}}},
+      	{name:'5.8%',itemStyle:{emphasis:{areaColor:'rgb(223,199,117)'},normal:{label:{textStyle:{color:'black',fontSize:'14'}}}}},
+      	{name:'7.5%',itemStyle:{emphasis:{areaColor:'rgb(252,242,111)'},normal:{label:{textStyle:{color:'black',fontSize:'14'}}}}},
+      	{name:'9.5%',itemStyle:{emphasis:{areaColor:'pink'},normal:{label:{textStyle:{color:'black',fontSize:'14'}}}}},
+      	{name:'4.4%',itemStyle:{emphasis:{areaColor:'yellowgreen'},normal:{label:{textStyle:{color:'black',fontSize:'16'}}}}},
+      	{name:'9.9%',itemStyle:{emphasis:{areaColor:'teal'},normal:{label:{textStyle:{color:'black',fontSize:'14'}}}}},
+      	{name:'3.4%',itemStyle:{emphasis:{areaColor:'rgb(8,33,78)'},normal:{label:{textStyle:{color:'black',fontSize:'14'}}}}},
+      	{name:'8.9%',itemStyle:{emphasis:{areaColor:'rgb(254,217,138)'},normal:{label:{textStyle:{color:'black',fontSize:'14'}}}}},
+      	{name:'5.6%',itemStyle:{emphasis:{areaColor:'orange'},normal:{label:{textStyle:{color:'black',fontSize:'14'}}}}},
+      	{name:'9.4%',itemStyle:{emphasis:{areaColor:'pink'},normal:{label:{textStyle:{color:'black',fontSize:'14'}}}}},
+      	{name:'7.7%',itemStyle:{emphasis:{areaColor:'white'},normal:{label:{textStyle:{color:'black',fontSize:'14'}}}}},
       	
       ],	
        
@@ -53,15 +53,19 @@ chart.setOption({
            
 
             itemStyle:{
+//          	left:'10%',
+ 
+       
 				normal:{
 //				    formatter: '{c}',
 					areaColor:'#8b415c',//地图颜色 
 					label:{
 						
-							show:true,
+							show:true,  //显示文本标签
 							textStyle: {
 							   color: 'transparent'
-									}
+								},
+													
 						  },
 					borderColor: '#b8738d',//边界颜色
 					borderWidth: 0.5,

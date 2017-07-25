@@ -17,23 +17,31 @@ html{
 	margin-left: 6%;
 	margin-right: 6%;
 	font-family: "宋体";
+	height:95%;
+	text-align: center;
 }
 
 .top2{
-	padding: 2% 0;
+	padding: 2% 2%;
 	font-size: 23px;
+	text-align: left;
 }
 
 .biaoge{
 	/*height:438px;*/
 	overflow: hidden;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 2%;
+	padding-right: 2%;
+	height:70%;
 }
 
 table{
 	float :left;
 	width:48%;
+	height:100%;
+}
+tbody{
+	height:100%;
 }
 table tr{
 	text-align: center;
@@ -42,6 +50,7 @@ table tr{
 	background:#b72322;
 	display: block;
 	display: flex;
+	height:4%;
 /*	height:17px;*/
 }
 
@@ -61,10 +70,11 @@ table .t3,table .t5{
 	color:#7fa83b;
 }
 .ye{
-	width:551px;
+	width:57%;
 	background:#b72322; 
-	margin-left: 20px;
+	margin: 8px auto;
 }
+
 .biaoge .right{
 	float: right;
 }
@@ -75,3 +85,8 @@ table .t3,table .t5{
 a:hover{
 	cursor:pointer;
 }
+@media only screen and (max-width: 1029px){
+	table tr{
+		height:4.5%;
+	}
+	}

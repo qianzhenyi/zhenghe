@@ -4,27 +4,52 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="css/distribution_heat.css"/>
+			<link rel="stylesheet" type="text/css" href="css/top-footer.css"/>
 		<style type="text/css">
 			body{
 				position: relative;
+				
 			}
 			.ok{
 				 position: absolute;
-				 left:-5%;
-				 top:5%;
+				 left:-64px;
+				 top:20px;
 				 transition: all 1s; 
 			}
 			.ok:hover{
 				position: absolute;
-				 left:-1%;
-				 top:5%;
+				 left:-20px;
+				 top:20px;
+			}
+			.shuoming{
+				text-align: center;
+				width:100%;
+				color:#efeeee;
+				font-size:20px;
 			}
 		</style>
 	</head>
 	<body>
-		<div id="main"></div>
+		<div class="top" style="color:#efeeee;">
+			<p class="left">
+				<span class="span1">2017年7月14日 星期五</span>
+				<span class="span2">10:01</span>
+				<span class="span3">天气：晴转多云</span>
+			</p>
+			<p class="mid">北方跨境电商大数据中心</p>
+			<p class="right">系统通知：消防系统紧急演练，时间07/10</p>
+		</div>
+		<div id="main">
+
+		</div>
 		 <div class="ok"><a href="../index.html"><img src="img/yy.png"/></a></div>
-	
+		 
+		<div class="shuoming">2017年全球交易量分布热度图</div>
+	   <div class="footer" style="margin-top: 19px;" >
+			<span>京公网安备 11000002000088号</span>|
+			<span>京ICP证070359号|互联网药品信息服务资格证编号（京）-经营性-2014-0008</span>|
+			<span>新出发京零字第大12007号</span>
+		</div>
       
 
     </body>
@@ -32,5 +57,12 @@
         <script src="js/echarts.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/world.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/distribution_heat.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		$(window).resize(function(){
+		var x=$(window).innerWidth();
+		var px =(60*x)/2400;
+		$("html").css("font-size",px+'px')
+		});
+	</script>
 
 </html>

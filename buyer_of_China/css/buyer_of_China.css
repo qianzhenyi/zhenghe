@@ -11,6 +11,7 @@ body{
 	position: absolute;
 	text-align: center;
 	top: 1.5%;
+	color: #1A1A1A;
 	width: 100%;
 }
 .top p{
@@ -30,6 +31,7 @@ body{
 	position: absolute;
 	bottom: 2%;
 	width: 100%;
+	color: #1A1A1A;
 }
 .footer span{
 	display: inline-block;
@@ -37,9 +39,9 @@ body{
 	margin-right: 3%;
 }
 .China_map{
-	width: 700px;
-	height: 600px;
-	margin-left: 5%;
+	width: 73%;
+	height: 83%;
+	/*margin-left: 5%;*/
 	
 }
 div.right{

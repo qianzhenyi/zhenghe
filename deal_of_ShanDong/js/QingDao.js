@@ -31,8 +31,7 @@ $.getJSON('js/shandong.json', function(data) {
 				    			label:{
 				    				show:true,
 				    				textStyle:{
-				    					color:'green',
-				    					fontWeight:'bold',
+				    					color:'black',
 				    					fontSize:15,
 				    				},
 				    			},
@@ -40,11 +39,11 @@ $.getJSON('js/shandong.json', function(data) {
 				    			borderWidth:3,
 				    		},
 				    		emphasis:{
-				    		  areaColor:'#C6E579',
+				    		  areaColor:'#f0ffff',
 				    			label:{
 				    				show:true,
 				    				textStyle:{
-				    					color:'red',
+				    					color:'rgb(255, 165, 0)',
 				    					fontSize:15,
 				    					fontWeight:'bold',
 				    				}
@@ -133,12 +132,17 @@ $.getJSON('js/shandong.json', function(data) {
 
 
 var Ming = echarts.init(document.querySelector('.Ming'));
- option ={
+ optionC ={
+ 	textStyle:{
+			color:'#fff',
+			fontSize:"15",
+		},
  	title:{
- 		text:'2017青岛市成交量趋势图',
+ 		x:'top',
+ 		text:'2017青岛市采购趋势量',
  		textStyle:{
  			color:'#dfb050',
- 			fontSize:15,
+ 			fontSize:20,
  		}
  	},
  	tooltip:{
@@ -163,6 +167,7 @@ var Ming = echarts.init(document.querySelector('.Ming'));
 	    			label:{
 	    				show:true,
 	    				position:'top'
+	    				
 
 	    			}
 	    		}
@@ -171,7 +176,7 @@ var Ming = echarts.init(document.querySelector('.Ming'));
 	    }
 	   ]
 };	
-	Ming.setOption(option);
+	Ming.setOption(optionC);
 	
 	
 	
@@ -179,12 +184,16 @@ var Ming = echarts.init(document.querySelector('.Ming'));
 	
 	
 var Zha = echarts.init(document.querySelector('.Zha'));
-	option= {
+	optionQ= {
+		textStyle:{
+			color:'#fff',
+			fontSize:"15",
+		},
 		title:{
  		text:'2017青岛市成交量趋势图：',
  		textStyle:{
  			color:'#dfb050',
- 			fontSize:15,
+ 			fontSize:20,
  		}
  	},
 		tooltip:{
@@ -228,110 +237,9 @@ var Zha = echarts.init(document.querySelector('.Zha'));
 		  
 		]
 	}
-	Zha.setOption(option)
-	
-var BoLiang = echarts.init(document.querySelector('.Bo-Liang-A'));
- var option_b ={
- 	title:{
- 		text:'2017青岛市成交量趋势图：',
- 		textStyle:{
- 			color:'#dfb050',
- 			fontSize:20,
- 		}
- 	},
-   	tooltip:{
-   		trigger:'axis',
-   	},
-	xAxis:[{
-		type:'category',
-		data:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
-	}],
-	yAxis:[{
-		type:'value',
-		min:-50,
-		max:100,
-		interval:50,
-	}],
-	series:[
-	    {
-	    	type:'line',
-	    	itemStyle:{
-	    		normal:{
-	    			color:'red',
-	    			label:{
-	    				show:true,
-	    				fontSize:15,
-	    				position:'top'
-
-	    			}
-	    		}
-	    	},
-	    	data:[43,60,58,72,44,36,87,94,55,72,69,88]
-	    }
-	   ]
-};	
-	BoLiang.setOption(option_b);
+	Zha.setOption(optionQ);
 	
 	
-	
-	
-	var LiangA = echarts.init(document.querySelector('.Bo-Liang-B'));
-	option= {
-		textStyle:{
- 		color:'#fff',
- 	},
-		title:{
- 		text:'2017青岛市成交量趋势图：',
- 		textStyle:{
- 			color:'#dfb050',
- 			fontSize:20,
- 		}
- 	},
-		tooltip:{
-			trigger:'axis'
-		},
-		xAxis:[{
-			type:'category',
-		    data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
-		}],
-		yAxis:[{
-			min:0,
-			max:2000,
-			interval:500
-		}],
-		series:[
-		    { 
-		    	type:'bar',
-		     	name:'用户总数量',
-		    	itemStyle:{
-		    		normal:{
-		    			color:'red',
-		    			label:{
-		    				show:true,
-		    				position:'top'
-		    			}
-		    		},
-		    	},
-		       	barWidth:20,
-			   data: [800, 500, 1300, 1500, 1800, 1600, 500, 1600, 1700, 1564, 1780, 1500]
-		    },
-		    {
-		    	type:'line',
-		    	name:'成交总数量',
-		    	itemStyle:{
-		    		normal:{
-		    			color:"green"
-		    		}
-		    	},
-			   data: [800, 500, 1300, 1500, 1800, 1600, 500, 1600, 1700, 1564, 1780, 1500]
-		    }
-		  
-		]
-	}
-	LiangA.setOption(option)
-	
-	
-	var   MoMo =  echarts.init(document.querySelector('.MoMo'));
 	var optionA = {
 		title:{
  		text:'2017山东基本数据',
@@ -390,52 +298,33 @@ var BoLiang = echarts.init(document.querySelector('.Bo-Liang-A'));
                                         // build a color map as your need.
                                         var colorList=[{
 									    type: 'linear',
-									    x: 0,
-									    y: 0,
-									    x2: 1,
-									    y2: 0,
 									    colorStops: [{
-									        offset: 0, color: '#FDBC16' // 0% 处的颜色
+									        offset: 0,
+									        color: '#FDBC16' // 0% 处的颜色
 									    }, {
-									        offset: 1, color: '#879560' // 100% 处的颜色
+									        offset: 1, 
+									        color: '#879560' // 100% 处的颜色
 									    }],
-									    globalCoord: true // 缺省为 false
 									},{
 									    type: 'linear',
-									    x: 0,
-									    y: 0,
-									    x2: 1,
-									    y2: 0,
 									    colorStops: [{
 									        offset: 0, color: 'green' // 0% 处的颜色
 									    }, {
 									        offset: 1, color: 'yellow' // 100% 处的颜色
 									    }],
-									    globalCoord: false // 缺省为 false
 									},{
 									    type: 'linear',
-									    x: 0,
-									    y: 0,
-									    x2: 1,
-									    y2: 0,
 									    colorStops: [{
 									        offset: 0, color: 'silver' // 0% 处的颜色
 									    }, {
 									        offset: 1, color: 'aqua' // 100% 处的颜色
 									    }],
-									    globalCoord: false // 缺省为 false
 									},{
-									    type: 'linear',
-									    x: 0,
-									    y: 0,
-									    x2: 1,
-									    y2: 0,
 									    colorStops: [{
 									        offset: 0, color: '#005789' // 0% 处的颜色
 									    }, {
 									        offset: 1, color: '#399cb8' // 100% 处的颜色
 									    }],
-									    globalCoord: false // 缺省为 false
 									}];
                                         return colorList[params.dataIndex]
                                     }
@@ -449,128 +338,75 @@ var BoLiang = echarts.init(document.querySelector('.Bo-Liang-A'));
 		            ]
 		        }
 	}
-         MoMo.setOption(optionA)
-         
-         
-         	var   MoMo =  echarts.init(document.querySelector('.MoMo'));
-	var optionA = {
-		title:{
- 		text:'2017山东基本数据',
- 		top:'2%',
- 		left:'2%',
- 		textStyle:{
- 			color:'#dfb050',
- 			fontSize:20,
- 		     }
- 	        },
-		    legend: {
-		        align:'left',
-		        left:'20%',
-		        top:'30%',
-		        orient:'vertical',
-		        data:['GDP','成交量    ','供货量   ','供货量'],
-		        textStyle:{
-		        	color:'#fff',
-		        },
-		        tooltip: {
-			        show: true
-			    }
-		    },
-		    calculable : true,
-		    series : 
-		        {
-		            name:'亿美元',
-		            type:'pie',
-		            radius : '70%',
-		            center : ['60%', '50%'],
-		            roseType : 'area',
-		              label: {
-		                normal: {
-		                    show:true,
-		                    textStyle:{
-		                    	color:'#fff',
-		                    }
-		                },
-		                emphasis: {
-		                    show: true
-		                }
-		            },
-		            labelLine: {
-		                normal: {
-		                    show: false,
-		                    length:4,
-		                },
-		                emphasis: {
-		                    show: true
-		                }
-		            },
-		            
-		            itemStyle: {
-                                normal: {
-							        color: function(params) {
-                                        // build a color map as your need.
-                                        var colorList=[{
-									    type: 'linear',
-									    x: 0,
-									    y: 0,
-									    x2: 1,
-									    y2: 0,
-									    colorStops: [{
-									        offset: 0, color: '#FDBC16' // 0% 处的颜色
-									    }, {
-									        offset: 1, color: '#879560' // 100% 处的颜色
-									    }],
-									    globalCoord: true // 缺省为 false
-									},{
-									    type: 'linear',
-									    x: 0,
-									    y: 0,
-									    x2: 1,
-									    y2: 0,
-									    colorStops: [{
-									        offset: 0, color: 'green' // 0% 处的颜色
-									    }, {
-									        offset: 1, color: 'yellow' // 100% 处的颜色
-									    }],
-									    globalCoord: false // 缺省为 false
-									},{
-									    type: 'linear',
-									    x: 0,
-									    y: 0,
-									    x2: 1,
-									    y2: 0,
-									    colorStops: [{
-									        offset: 0, color: 'silver' // 0% 处的颜色
-									    }, {
-									        offset: 1, color: 'aqua' // 100% 处的颜色
-									    }],
-									    globalCoord: false // 缺省为 false
-									},{
-									    type: 'linear',
-									    x: 0,
-									    y: 0,
-									    x2: 1,
-									    y2: 0,
-									    colorStops: [{
-									        offset: 0, color: '#005789' // 0% 处的颜色
-									    }, {
-									        offset: 1, color: '#399cb8' // 100% 处的颜色
-									    }],
-									    globalCoord: false // 缺省为 false
-									}];
-                                        return colorList[params.dataIndex]
-                                    }
-                               },
-                            },
-		            data:[
-		                {value:10, name:'GDP'},
-		                {value:5, name:'成交量    '},
-		                {value:15, name:'供货量   '},
-		                {value:25, name:'供货量'},
-		            ]
-		        }
-	}
-         MoMo.setOption(optionA)
+	
+	
+	$('.SASA').on('click',function(){
+			$('<div class="MoMo"></div>').appendTo('.FA');
+			$('.FA').animate({
+				'width': '70%',
+				'height': '60%',
+				'background': '#2F79BE',
+                'right':'15%',
+				'position': 'absolute',
+				'top': '25%',
+				'z-index': '9999999999'
+				},300,function(){
+			var   MoMo =  echarts.init(document.querySelector('.MoMo'));
+			MoMo.setOption(optionA);
+				})
+			$('.II').css('display','block')
+		});
+	$('.So').on('click',function(){
+			$('.MoMo').remove();
+			$('.FA').css('width','0');
+			$('.FA').css('height','0');
+			$('.II').css('display','none')
+		})
 })
 
+$('.DADA').on('click',function(){
+	$('<div class="GG"></div>').appendTo('.FC');
+	$('.FC').animate({
+		'width': '70%',
+		'height': '60%',
+		'background': '#2F79BE',
+        'right':'15%',
+		'position': 'absolute',
+		'top': '25%',
+		'z-index': '9999999999'
+	},300,function(){
+		var   Gb =  echarts.init(document.querySelector('.GG'));
+			  Gb.setOption(optionC);
+	})
+	$('.DD').css('display','block')
+})
+$('.UU').on('click',function(){
+			$('.GG').remove();
+			$('.FC').css('width','0');
+			$('.FC').css('height','0');
+			$('.DD').css('display','none')
+	});
 
+
+$('.SXSX').on('click',function(){
+	$('<div class="TU"></div>').appendTo('.FG');
+	$('.FG').animate({
+		'width': '70%',
+		'height': '60%',
+		'background': '#2F79BE',
+        'right':'15%',
+		'position': 'absolute',
+		'top': '25%',
+		'z-index': '9999999999'
+	},300,function(){
+		var   Yi =  echarts.init(document.querySelector('.TU'));
+			  Yi.setOption(optionQ);
+	})
+	$('.JJ').css('display','block')
+})
+$('.YU').on('click',function(){
+			$('.TU').remove();
+			$('.FG').css('width','0');
+			$('.FG').css('height','0');
+			$('.JJ').css('display','none')
+		})

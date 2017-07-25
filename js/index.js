@@ -128,21 +128,19 @@ window.onload = function() {
 		}
 		return res;
 	};
+	
 	var color = ['#fdd442', '#ffa022', '#46bee9'];
 	var series = [];
 	[
 		['中国', BJData]
 	].forEach(function(item, i) {
 		series.push({
-
 			name: '贸易' + ' Top15',
 			type: 'effectScatter',
 			coordinateSystem: 'geo',
 			zlevel: 2,
-			
-			
 			rippleEffect: {
-				brushType: 'fill',
+				brushType: 'stroke',
 				scale:6
 			},
 			label: {
@@ -168,8 +166,10 @@ window.onload = function() {
 			data: item[1].map(function(dataItem) {
 				return {
 					name: dataItem[1].name,
-					value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value])
+					value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value]),
+					//value:geoCoordMap[dataItem[1].name]
 				};
+				
 			})
 		});
 	});
@@ -181,8 +181,9 @@ window.onload = function() {
 				height:200,
 				width:200,
 				fontSize:12,
-				formatter: "{a} <br/> {b} <br/>交易量: {c} ",
-			
+				formatter: function(params){
+					return params.name+'<br/>'+'交易量'+':'+params.value[2]
+				},
 		},
 		//地图样式
 		geo: {
@@ -195,6 +196,7 @@ window.onload = function() {
 			},
 			//地图可否拖动
 			roam: true,
+			scaleLimit:{max:3, min:1},
 			itemStyle: {
 				normal: {
 					//地图颜色
@@ -216,10 +218,12 @@ window.onload = function() {
 
 	topbar.setOption({
 		color: ["white", "red", "tan"],
+		height:'100%',
+		
 		title: [{
 			text: '询盘邮件趋势图（单位：万封）',
-			x: '70',
-			y: "10",
+			x: '20%',
+			y: "10%",
 			textStyle: {
 				color: "white",
 				fontSize: 14,
@@ -248,7 +252,7 @@ window.onload = function() {
 		}],
 		grid: {
 			left: '5%',
-			top: '15%',
+			bottom: '5%',
 			containLabel: true,
 			//width:300,
 			height: 120
@@ -280,17 +284,19 @@ window.onload = function() {
 				name: '8:00~20:00',
 				type: 'bar',
 				stack: '总量',
-				barWidth: '15',
+				barWidth: '30%',
 				data: [520, 502, 501, 534, 590, 530, 520]
 			}, {
 				name: '20:00~8:00',
 				type: 'bar',
 				stack: '总量',
+				barWidth: '30%',
 				data: [520, 432, 301, 234, 190, 230, 210]
 			}, {
 				name: '峰值IP',
 				type: 'bar',
 				stack: '总量',
+				barWidth: '30%',
 				data: [420, 482, 491, 434, 490, 470, 410]
 			}, {
 				name: '同期环比',
@@ -323,15 +329,16 @@ window.onload = function() {
 			}
 		},
 		grid: {
-			left: '5%',
-			top: '20%',
-			containLabel: true,
+			left: '10%',
+			top: '9%',
+			//containLabel: true,
 			//width:'100%',
 			height: '77%',
 		},
 		xAxis: [{
 			type: 'category',
-			data: ['0', '2', '4', '6', '8', '10', '12', '14', '16', '18', '20', '22', '24'],
+			data: ['0', '1','2','3', '4', '5','6', '7','8','9', '10', '11','12', '13',
+			'14', '15','16', '17','18', '19','20','21', '22', '23','24'],
 			axisLabel: {
 				textStyle: {
 					color: 'white', //坐标值得具体的颜色
@@ -357,7 +364,10 @@ window.onload = function() {
 			{
 				name: 'xxx',
 				type: 'line',
-				data: [520, 432, 301, 234, 190, 230, 210],
+				data: [220, 232, 101, 234, 190, 230,
+				110,118,155,322,144,355,
+				133,234,156,155,177,199,
+				156,166,155,144,123,190],
 				symbol: 'none', //拐点样式
 				//symbolSize: 10,//拐点大小
 				itemStyle: {
@@ -371,7 +381,10 @@ window.onload = function() {
 			}, {
 				name: 'xxx',
 				type: 'line',
-				data: [520, 432, 301, 234, 190, 530, 710],
+				data: [20, 32, 101, 134, 190, 130,
+				210,118,255,222,144,155,
+				133,234,156,155,177,199,
+				156,166,355,144,123,190],
 				symbol: 'none', //拐点样式
 				//symbolSize: 10,//拐点大小
 				itemStyle: {
@@ -385,7 +398,10 @@ window.onload = function() {
 			}, {
 				name: 'xxx',
 				type: 'line',
-				data: [220, 232, 201, 234, 390, 530, 610],
+				data: [120, 232, 101, 234, 90, 230,
+				210,118,255,122,144,255,
+				133,234,156,155,177,199,
+				156,166,255,144,223,190],
 				symbol: 'none', //拐点样式
 				//symbolSize: 10,//拐点大小
 				itemStyle: {
@@ -414,7 +430,7 @@ window.onload = function() {
 		},
 		grid: {
 			left: '5%',
-			top: '20%',
+			top: '16%',
 			containLabel: true,
 			//width:'100%',
 			height: '77%',
@@ -616,8 +632,8 @@ window.onload = function() {
 	lpie.setOption({
 		title: [{
 			text: '10大热销产品',
-			x: '50',
-			y: "80%",
+			x: '10%',
+			y: "88%",
 			textStyle: {
 				color: "white",
 				fontSize: 16,
@@ -631,10 +647,12 @@ window.onload = function() {
 			itemWidth: 10,
 			itemHeight: 10,
 			itemGap: 4,
-			padding: [20, 0, 0, 0],
+			top:'5%',
+			right:'5%',
 			position: "inner",
 			textStyle: {
-				color: "white"
+				color: "white",
+				fontSize:10,
 			}
 		}],
 		tooltip: [{
@@ -645,19 +663,22 @@ window.onload = function() {
 		series: [{
 			name: '10大热销产品',
 			type: 'pie',
-			radius: '85%',
-			center: ['35%', '45%'],
+			radius: '45%',
+			center: ['33%', '45%'],
 			labelLine: {
 				normal: {
-					show: false
+					show: true,
+					length:0,
 				}
 			},
 			label: {
 				normal: {
-					show: false,
-					position: "inner"
+					show: true,
+					position: "right",
+					
 				}
 			},
+			
 			data: [{
 				value: 99,
 				name: '1.建筑',
@@ -741,16 +762,16 @@ window.onload = function() {
 				}
 			}],
 			roseType: 'angle',
-			itemStyle: {
-				emphasis: {
+			 itemStyle: {
+                normal: {
+                    color: '#c23531',
+                    shadowBlur: 200,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
 
-					shadowBlur: 100,
-					shadowColor: 'rgba(0, 0, 0, 0.5)',
-
-					shadowOffsetX: 30, //阴影水平方向上的偏移
-					shadowOffsetY: 50, //阴影垂直方向上的偏移
-				}
-			},
+            animationType: 'scale',
+            animationEasing: 'elasticOut',
 			
 		}]
 	})
@@ -762,17 +783,17 @@ window.onload = function() {
 	var step2=0;
 	
     function fn(){
-    	if(step1==-246)(step1=0);
+    	if(step1==-282)(step1=0);
     	step1-=3;
     	tb1.style.top=step1+'px';
     }
     function fn2(){
-    	if(step2==-246)(step2=0);
+    	if(step2==-282)(step2=0);
     	step2-=3;
     	tb2.style.top=step2+'px';
     }
-    var t1=setInterval(fn,150);
-	var t2=setInterval(fn2,150);
+    var t1=setInterval(fn,250);
+	var t2=setInterval(fn2,250);
 	
 	var tr1=document.querySelectorAll('.tble-left tr');
 	var tr2=document.querySelectorAll('.tble-right tr');
@@ -801,7 +822,7 @@ window.onload = function() {
 	
 	ff(tr1,t1,fn);
 	ff(tr2,t2,fn2);
-	
+//	
 //	for (var j = 0; j < tr2.length; j++) {
 //  	tr2[j].onmouseover=function(){
 //		clearInterval(t2);
@@ -810,59 +831,31 @@ window.onload = function() {
 //		t2=setInterval(fn,150);
 //	}
 //	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 	//各个图表的点击跳转
 	var se1 = document.querySelector(".map"),
 		se2 = document.querySelector(".chart_top"),
-		se3 = document.querySelector(".cline"),
+		se3 = document.querySelector(".bottom_line1"),
 		se4 = document.querySelector(".left_pie"),
 		se5 = document.querySelector(".center_chart_left"),
 		se6 = document.querySelector(".center_chart_right"),
 		se7 = document.querySelectorAll(".right_trade>div");
 
-//	se1.onclick = function() {
-//		window.location.href = "distribution_heat/distribution_heat.html";
-//	}
-//	se2.onclick = function() {
-//		window.location.href = "distribution_heat/mail.html";
-//	}
-//	se3.onclick = function() {
-//		window.location.href = "distribution_heat/mail.html";
-//	}
-//	se4.onclick = function() {
-//		window.location.href = "web_bestsell_goods/web_bestsell_goods.html";
-//	}
+	
+	
 	se5.onclick = function() {
 		window.location.href = "country_of_buyer/country_of_buyer.html";
 	}
 	se6.onclick = function() {
 		window.location.href = "buyer_of_China/buyer_of_China.html";
 	}
-//	se7[0].onclick = function() {
-//		window.location.href = "distribution_heat/distribution_heat.html";
-//	}
-//	se7[1].onclick = function() {
-//		window.location.href = "distribution_heat/distribution_heat.html";
-//	}
-//	se7[2].onclick = function() {
-//		window.location.href = "deal_of_ShanDong/deal_of_ShanDong.html";
-//	}
-//	se7[3].onclick = function() {
-//		window.location.href = "deal_of_ShanDong/deal_of_ShanDong.html";
-//	}
-
+	
+	
+	$(window).resize(function(){
+		var x=$(window).innerWidth();
+		var px =(100*x)/2400;
+		$("html").css("font-size",px+'px')
+		});
+	
+	
 }

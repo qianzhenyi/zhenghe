@@ -1,12 +1,18 @@
-html,
+
+
+
+
+
+@media only screen and (min-width: 1600px) {
+	html,
 body {
 	width: 100%;
 	height: 100%;
 	background: url(../img/bg-index.jpg) no-repeat;
 	background-size: cover;
 	overflow: hidden;
-	font-family: "微软雅黑";
-	font-size: 14px;
+	font-family: "宋体";
+	font-size: 100px;
 	color: white;
 }
 
@@ -18,6 +24,7 @@ body {
 	width: 98%;
 	height: 100%;
 	margin: 0 auto;
+	font-size: 0.14rem;
 }
 
 header {
@@ -34,7 +41,7 @@ header>div {
 
 header>div:nth-child(2) {
 	width: 45%;
-	font-size: 20px;
+	font-size: 0.2rem;
 	padding-left: 6.8%;
 	padding-right: 6.3%;
 }
@@ -100,19 +107,18 @@ header>div:nth-child(2) {
 .chart_title {
 	position: absolute;
 	top: 0;
-	left: 0;
-	width: 82%;
-	height: 20%;
+	left: 12%;
+	width: 85%;
+	height: 12%;
 	padding-top: 1%;
 	border-bottom: 1px solid white;
-	margin-left: 12%;
-	font-size: 12px;
+	font-size: 0.12rem;
 	z-index: 1000;
 }
 
 .chart_title>p {
 	float: left;
-	margin-right: 130px;
+	margin-right: 35%;
 }
 
 .chart_title>a {
@@ -193,7 +199,7 @@ header>div:nth-child(2) {
 
 .lpie {
 	width: 100%;
-	height: 206px;
+	height: 100%;
 }
 
 .center_chart {
@@ -210,7 +216,6 @@ header>div:nth-child(2) {
 	background: #4C5864;
 	border-radius: 4px;
 	position: relative;
-	overflow: hidden;
 }
 
 .center_chart_left {
@@ -230,8 +235,7 @@ header>div:nth-child(2) {
 	border-bottom-color: red;
 	float: right;
 	margin-right: 6px;
-	margin-bottom: 4px;
-	animation:move1 3s linear infinite;
+	animation:move1 1s linear infinite;
 }
 @keyframes move1{
 	from{margin-bottom: 4px;}
@@ -244,27 +248,26 @@ header>div:nth-child(2) {
 	border-top-color: green;
 	float: right;
 	margin-right: 6px;
-	margin-top: 6px;
-	animation:move2 3s linear infinite;
+	animation:move2 1s linear infinite;
 }
 @keyframes move2{
-	from{margin-top: 6px;}
-	to{margin-top: 1px;}
+	from{margin-top: 4px;}
+	to{margin-top: 0px;}
 }
 
 .tbletitle{
+	width: 90%;
 	height: 12%;
 	border-left: 7px solid #AAABAB;
 	margin-bottom: 1%;
+	margin: 0 auto;
 }
 .tbletitle>p{
 	float: left;
-	
-	height: 100%;
 	text-align: center;
-	font-size: 12px;
+	font-size: 0.14rem;
 	height: 100%;
-	padding: 5px 0;
+	padding: 7% 0;
 	
 }
 .tbletitle>p:nth-child(1) {
@@ -289,19 +292,28 @@ header>div:nth-child(2) {
 	width: 18%;
 	border-left: 1px solid gainsboro;
 }
-.tble{
+.tble-wrap{
 	width: 100%;
+	height: 72%;
+	overflow: hidden;
+	position: relative;
+	
+}
+.tble{
+	width: 90%;
+	height: 100%;
 	border-collapse: collapse;
 	padding-left: 2px;
 	position: absolute;
 	top:1%;
-	left: 0;
+	left: 5%;
+	z-index: 1000;
+	
+}
+tbody{
+	height: 100%;
 }
 
-.tble tr:hover{
-	transform: scale(1.1);
-	color: yellow;
-}
 
 .tble_red{
 	border-left: 6px solid #E23A0F!important;
@@ -311,43 +323,46 @@ header>div:nth-child(2) {
 }
 .tble tr {
 	width: 100%;
-	height: 17%;
-	font-size: 12px;
+	font-size: 0.12rem;
 	margin: 9px 0;
 	display: block;
 	border-left: 6px solid #AAABAB;
-	position: relative;
+	
 }
-.tble-wrap{
-	width: 100%;
-	height: 70%;
-	overflow: hidden;
-	position: relative;
+
+
+.tble tr:hover{
+	transform: scale(1.1);
+	color: yellow;
 	
 }
 .center_chart>div td {
+	width: 35%;
+	height: 20px;
+	font-size: 0.12rem;
+	background: #5D6B6E;
+}
+.center_chart>div td:nth-child(1) {
 	width: 35%;
 	height: 100%;
 	font-size: 12px;
 	background: #5D6B6E;
 }
-
 .right_trade {
 	width: 39.2%;
-	height: 206px;
+	height: 100%;
 }
 
 .trade_icon {
 	position: absolute;
 	top: 0;
 	left: 8%;
-	width: 20px;
-	height: 20px;
-	background: white;
+	width: 10%;
+	height: 10%px;
 	text-align: center;
 }
 
-.trade_icon:before {
+/*.trade_icon:before {
 	width: 0;
 	height: 0;
 	border-left: 11px solid transparent;
@@ -357,10 +372,10 @@ header>div:nth-child(2) {
 	content: "";
 	top: 20px;
 	left: -1px;
-}
+}*/
 
 .trade_icon img {
-	padding-top: 25%;
+	width:100;
 }
 
 .right_trade>div {
@@ -371,8 +386,8 @@ header>div:nth-child(2) {
 	background: #4C5864;
 	border-radius: 4px;
 	float: left;
-	padding: 5px 0 5px 40px;
-	font-size: 12px;
+	padding: 15px 0 15px 40px;
+	font-size: 0.16rem;
 	position: relative;
 }
 
@@ -393,7 +408,7 @@ header>div:nth-child(2) {
 }
 
 .right_trade>div p:nth-child(1) {
-	font-size: 14px;
+	font-size: 0.18rem;
 	width: 65%;
 	text-indent: 8%;
 	border-bottom: 1px solid white;
@@ -407,23 +422,20 @@ header>div:nth-child(2) {
 
 .more{
 	color: cornflowerblue;
-	font-size: 12px;
+	font-size: 0.12rem;
 	position: absolute;
-	bottom:20px;
-	right: 40px;
+	bottom:-2px;
+	right: 0px;
 	text-decoration: underline;
 }
 
-.chart_bottom-more{
-	right: 10px;
-	bottom: 10px;
-}
+
 /***********************footer*********************************/
 
 footer {
 	height: 6.7%;
 	line-height: 38px;
-	font-size: 12px;
+	font-size: 0.12rem;
 }
 
 footer ul {
@@ -435,4 +447,909 @@ footer ul {
 footer ul li {
 	float: left;
 	margin-right: 1%;
+}
+
+}
+/******************************************************************************/
+@media only screen and (min-width: 1025px) and (max-width: 1599px) {
+	
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	background: url(../img/bg-index.jpg) no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	font-family: "宋体";
+	font-size: 100px;
+	color: white;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	width: 98%;
+	height: 100%;
+	margin: 0 auto;
+	font-size: 0.14rem;
+}
+
+header {
+	height: 8%;
+	width: 100%;
+	padding: 2% 10%;
+	margin-bottom: 1%;
+}
+
+header>div {
+	float: left;
+	line-height: 50%;
+}
+
+header>div:nth-child(2) {
+	width: 45%;
+	font-size: 0.2rem;
+	padding-left: 6.8%;
+	padding-right: 6.3%;
+}
+
+.section1 {
+	height: 50%;
+	width: 100%;
+}
+
+.map {
+	width: 58%;
+	height: 100%;
+	border-radius: 4px;
+	background: #4C5864;
+	float: left;
+	color: white;
+	position: relative;
+}
+
+.map div:nth-child(2) {
+	width: 20%;
+	height: 20%;
+	position: absolute;
+	left: 5%;
+	bottom: 14%;
+	z-index: 1000;
+}
+
+.map_detail {
+	width: 100%;
+	height: 100%;
+}
+
+.chart_right {
+	width: 39.6%;
+	height: 100%;
+	float: left;
+	margin-left: 2.3%;
+}
+
+.chart_right>div {
+	width: 100%;
+	height: 48%;
+	background: #4C5864;
+	border-radius: 4px;
+	display: block;
+	position: relative;
+}
+
+.chart_top {
+	margin-bottom: 2%;
+}
+
+.top_bar {
+	width: 100%;
+	height: 100%;
+}
+
+.chart_bottom {
+	position: relative;
+}
+
+.chart_title {
+	position: absolute;
+	top: 0;
+	left: 12%;
+	width: 85%;
+	height: 20%;
+	padding-top: 1%;
+	border-bottom: 1px solid white;
+	font-size: 0.12rem;
+	z-index: 1000;
+}
+
+.chart_title>p {
+	float: left;
+	margin-right: 30%;
+}
+
+.chart_title>a {
+	float: left;
+	width: 30px;
+	height: 20px;
+	line-height: 20px;
+	color: #000000;
+	margin-top: 4px;
+	margin-right: 2px;
+	border-radius: 2px;
+	text-align: center;
+}
+
+.chart_title>a:hover {
+	cursor: pointer;
+}
+
+.chart_title>a:nth-child(2) {
+	background: #ED6F0E;
+}
+
+.chart_title>a:nth-child(3) {
+	background: #84BCC4;
+}
+
+.chart_title>a:nth-child(4) {
+	background: white;
+}
+
+.bottom_line {
+	width: 95%;
+	height: 100%;
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.bottom_line1 {
+	width: 95%;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.bottom_line2 {
+	width: 95%;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+/***********************se2*********************************/
+
+.section2 {
+	height: 32%;
+	width: 100%;
+	margin-top: 12px;
+}
+
+.section2>div {
+	float: left;
+}
+
+.left_pie {
+	width: 26.6%;
+	height: 100%;
+	background: #4C5864;
+	border-radius: 4px;
+	position: relative;
+}
+
+.lpie {
+	width: 100%;
+	height: 100%;
+}
+
+.center_chart {
+	width: 30%;
+	height: 100%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.center_chart>div {
+	width: 46%;
+	height: 100%;
+	float: left;
+	background: #4C5864;
+	border-radius: 4px;
+	position: relative;
+}
+
+.center_chart_left {
+	margin-right: 6%;
+}
+
+.center_chart>div>p {
+	text-align: center;
+	padding: 3px;
+
+}
+
+.center_chart>div span {
+	height: 0;
+	width: 0;
+	border: 5px solid transparent;
+	border-bottom-color: red;
+	float: right;
+	margin-right: 6px;
+	animation:move1 1s linear infinite;
+}
+@keyframes move1{
+	from{margin-bottom: 4px;}
+	to{margin-bottom: 0px;}
+}
+.center_chart>div i {
+	height: 0;
+	width: 0;
+	border: 5px solid transparent;
+	border-top-color: green;
+	float: right;
+	margin-right: 6px;
+	animation:move2 1s linear infinite;
+}
+@keyframes move2{
+	from{margin-top: 4px;}
+	to{margin-top: 0px;}
+}
+
+.tbletitle{
+	width: 90%;
+	height: 12%;
+	border-left: 7px solid #AAABAB;
+	margin-bottom: 1%;
+	margin: 0 auto;
+}
+.tbletitle>p{
+	float: left;
+	height: 100%;
+	line-height: 90%;
+	text-align: center;
+	font-size: 0.12rem;
+	height: 100%;
+	padding: 8px 0;
+	
+}
+.tbletitle>p:nth-child(1) {
+	background: #71A5BD;
+	width: 26%;
+	text-align: center;
+	
+}
+
+.tbletitle>p:nth-child(2) {
+	background: #C093A7;
+	width:32%;
+}
+
+.tbletitle>p:nth-child(3) {
+	background: #B54C7D;
+	width:24%;
+}
+
+.tbletitle>p:nth-child(4) {
+	background: #B54C7D;
+	width: 18%;
+	border-left: 1px solid gainsboro;
+}
+.tble-wrap{
+	width: 100%;
+	height: 72%;
+	overflow: hidden;
+	position: relative;
+	
+}
+.tble{
+	width: 90%;
+	height: 100%;
+	border-collapse: collapse;
+	padding-left: 2px;
+	position: absolute;
+	top:1%;
+	left: 5%;
+	z-index: 1000;
+	
+}
+tbody{
+	height: 100%;
+}
+
+
+.tble_red{
+	border-left: 6px solid #E23A0F!important;
+}
+.tble tr td:nth-child(1) {
+	margin-left: 2px;
+}
+.tble tr {
+	width: 100%;
+	font-size: 0.12rem;
+	margin: 9px 0;
+	display: block;
+	border-left: 6px solid #AAABAB;
+	
+}
+
+
+.tble tr:hover{
+	transform: scale(1.1);
+	color: yellow;
+	
+}
+.center_chart>div td {
+	width: 35%;
+	height: 20px;
+	font-size: 0.12rem;
+	background: #5D6B6E;
+}
+.center_chart>div td:nth-child(1) {
+	width: 40%;
+	height: 100%;
+	font-size: 12px;
+	background: #5D6B6E;
+}
+.right_trade {
+	width: 39.2%;
+	height: 100%;
+}
+
+.trade_icon {
+	position: absolute;
+	top: 0;
+	left: 8%;
+	width: 10%;
+	height: 10%px;
+	text-align: center;
+}
+
+/*.trade_icon:before {
+	width: 0;
+	height: 0;
+	border-left: 11px solid transparent;
+	border-right: 11px solid transparent;
+	border-top: 11px solid white;
+	position: absolute;
+	content: "";
+	top: 20px;
+	left: -1px;
+}*/
+
+.trade_icon img {
+	width:100;
+}
+
+.right_trade>div {
+	float: left;
+	width: 47.5%;
+	height: 46%;
+	margin-bottom: 3%;
+	background: #4C5864;
+	border-radius: 4px;
+	float: left;
+	padding: 5px 0 5px 40px;
+	font-size: 0.12rem;
+	position: relative;
+}
+
+.right_trade>div:nth-child(1) {
+	margin-right: 4%;
+}
+
+.right_trade>div:nth-child(3) {
+	margin-right: 4%;
+}
+
+.right_trade>div span {
+	color: red;
+}
+
+.right_trade>div i {
+	color: greenyellow;
+}
+
+.right_trade>div p:nth-child(1) {
+	font-size: 0.14rem;
+	width: 65%;
+	text-indent: 8%;
+	border-bottom: 1px solid white;
+	margin-bottom: 1%;
+}
+
+.map,.chart_top,.left_pie,.center_chart_left,.center_chart_right,.right_trade>div{
+	cursor: pointer;
+}
+
+
+.more{
+	color: cornflowerblue;
+	font-size: 0.12rem;
+	position: absolute;
+	bottom:-2px;
+	right: 0px;
+	text-decoration: underline;
+}
+
+
+/***********************footer*********************************/
+
+footer {
+	height: 6.7%;
+	line-height: 38px;
+	font-size: 0.12rem;
+}
+
+footer ul {
+	height: 100%;
+	width: 63%;
+	margin: 0 auto;
+}
+
+footer ul li {
+	float: left;
+	margin-right: 1%;
+}
+}
+
+
+/**********************for ipad***********************************/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	html,
+body {
+	width: 100%;
+	height: 100%;
+	background: url(../img/bg-index.jpg) no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	font-family: "宋体";
+	font-size: 100px;
+	color: white;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	width: 98%;
+	height: 100%;
+	margin: 0 auto;
+	font-size: 0.14rem;
+}
+
+header {
+	height: 8%;
+	width: 100%;
+	padding: 2% 10%;
+	margin-bottom: 1%;
+}
+
+header>div {
+	float: left;
+	line-height: 50%;
+}
+
+header>div:nth-child(2) {
+	width: 45%;
+	font-size: 0.2rem;
+	padding-left: 6.8%;
+	padding-right: 6.3%;
+}
+
+.section1 {
+	height: 50%;
+	width: 100%;
+}
+
+.map {
+	width: 58%;
+	height: 100%;
+	border-radius: 4px;
+	background: #4C5864;
+	float: left;
+	color: white;
+	position: relative;
+}
+
+.map div:nth-child(2) {
+	width: 20%;
+	height: 20%;
+	position: absolute;
+	left: 5%;
+	bottom: 14%;
+	z-index: 1000;
+}
+
+.map_detail {
+	width: 100%;
+	height: 100%;
+}
+
+.chart_right {
+	width: 39.6%;
+	height: 100%;
+	float: left;
+	margin-left: 2.3%;
+}
+
+.chart_right>div {
+	width: 100%;
+	height: 48%;
+	background: #4C5864;
+	border-radius: 4px;
+	display: block;
+	position: relative;
+}
+
+.chart_top {
+	margin-bottom: 2%;
+}
+
+.top_bar {
+	width: 100%;
+	height: 100%;
+}
+
+.chart_bottom {
+	position: relative;
+}
+
+.chart_title {
+	position: absolute;
+	top: 0;
+	left: 12%;
+	width: 85%;
+	height: 18%;
+	padding-top: 2%;
+	border-bottom: 1px solid white;
+	font-size: 0.12rem;
+	z-index: 1000;
+}
+
+.chart_title>p {
+	float: left;
+	margin-right: 20%;
+}
+
+.chart_title>a {
+	float: left;
+	width: 30px;
+	height: 20px;
+	line-height: 20px;
+	color: #000000;
+	margin-top: 4px;
+	margin-right: 2px;
+	border-radius: 2px;
+	text-align: center;
+}
+
+.chart_title>a:hover {
+	cursor: pointer;
+}
+
+.chart_title>a:nth-child(2) {
+	background: #ED6F0E;
+}
+
+.chart_title>a:nth-child(3) {
+	background: #84BCC4;
+}
+
+.chart_title>a:nth-child(4) {
+	background: white;
+}
+
+.bottom_line {
+	width: 95%;
+	height: 100%;
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.bottom_line1 {
+	width: 95%;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.bottom_line2 {
+	width: 95%;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+/***********************se2*********************************/
+
+.section2 {
+	height: 32%;
+	width: 100%;
+	margin-top: 12px;
+}
+
+.section2>div {
+	float: left;
+}
+
+.left_pie {
+	width: 26.6%;
+	height: 100%;
+	background: #4C5864;
+	border-radius: 4px;
+	position: relative;
+}
+
+.lpie {
+	width: 100%;
+	height: 100%;
+}
+
+.center_chart {
+	width: 30%;
+	height: 100%;
+	margin-left: 1%;
+	margin-right: 2%;
+}
+
+.center_chart>div {
+	width: 47%;
+	height: 100%;
+	float: left;
+	background: #4C5864;
+	border-radius: 4px;
+	position: relative;
+}
+
+.center_chart_left {
+	margin-right: 6%;
+}
+
+.center_chart>div>p {
+	text-align: center;
+	padding: 3px;
+
+}
+
+.center_chart>div span {
+	height: 0;
+	width: 0;
+	border: 5px solid transparent;
+	border-bottom-color: red;
+	float: right;
+	margin-right: 6px;
+	animation:move1 1s linear infinite;
+}
+@keyframes move1{
+	from{margin-bottom: 4px;}
+	to{margin-bottom: 0px;}
+}
+.center_chart>div i {
+	height: 0;
+	width: 0;
+	border: 5px solid transparent;
+	border-top-color: green;
+	float: right;
+	margin-right: 6px;
+	animation:move2 1s linear infinite;
+}
+@keyframes move2{
+	from{margin-top: 4px;}
+	to{margin-top: 0px;}
+}
+
+.tbletitle{
+	width: 90%;
+	height: 12%;
+	border-left: 7px solid #AAABAB;
+	margin-bottom: 1%;
+	margin: 0 auto;
+}
+.tbletitle>p{
+	float: left;
+	
+	height: 100%;
+	text-align: center;
+	font-size: 0.12rem;
+	height: 100%;
+	padding: 8px 0;
+	
+}
+.tbletitle>p:nth-child(1) {
+	background: #71A5BD;
+	width: 26%;
+	text-align: center;
+	
+}
+
+.tbletitle>p:nth-child(2) {
+	background: #C093A7;
+	width:32%;
+}
+
+.tbletitle>p:nth-child(3) {
+	background: #B54C7D;
+	width:24%;
+}
+
+.tbletitle>p:nth-child(4) {
+	background: #B54C7D;
+	width: 18%;
+	border-left: 1px solid gainsboro;
+}
+.tble-wrap{
+	width: 100%;
+	height: 72%;
+	overflow: hidden;
+	position: relative;
+	
+}
+.tble{
+	width: 90%;
+	height: 100%;
+	border-collapse: collapse;
+	padding-left: 2px;
+	position: absolute;
+	top:1%;
+	left: 5%;
+	z-index: 1000;
+	
+}
+tbody{
+	height: 100%;
+}
+
+
+.tble_red{
+	border-left: 6px solid #E23A0F!important;
+}
+.tble tr td:nth-child(1) {
+	margin-left: 2px;
+}
+.tble tr {
+	width: 100%;
+	font-size: 0.12rem;
+	margin: 9px 0;
+	display: block;
+	border-left: 6px solid #AAABAB;
+	
+}
+
+
+.tble tr:hover{
+	transform: scale(1.1);
+	color: yellow;
+	
+}
+.center_chart>div td {
+	width: 35%;
+	height: 20px;
+	font-size: 0.12rem;
+	background: #5D6B6E;
+}
+.center_chart>div td:nth-child(1) {
+	width: 40%;
+	height: 100%;
+	font-size: 12px;
+	background: #5D6B6E;
+}
+.right_trade {
+	width: 39.2%;
+	height: 100%;
+}
+
+.trade_icon {
+	position: absolute;
+	top: 0;
+	left: 8%;
+	width: 10%;
+	height: 10%px;
+	text-align: center;
+}
+
+/*.trade_icon:before {
+	width: 0;
+	height: 0;
+	border-left: 11px solid transparent;
+	border-right: 11px solid transparent;
+	border-top: 11px solid white;
+	position: absolute;
+	content: "";
+	top: 20px;
+	left: -1px;
+}*/
+
+.trade_icon img {
+	width:100;
+}
+
+.right_trade>div {
+	float: left;
+	width: 47.5%;
+	height: 46%;
+	margin-bottom: 3%;
+	background: #4C5864;
+	border-radius: 4px;
+	float: left;
+	padding: 5px 0 5px 40px;
+	font-size: 0.12rem;
+	position: relative;
+}
+
+.right_trade>div:nth-child(1) {
+	margin-right: 4%;
+}
+
+.right_trade>div:nth-child(3) {
+	margin-right: 4%;
+}
+
+.right_trade>div span {
+	color: red;
+}
+
+.right_trade>div i {
+	color: greenyellow;
+}
+
+.right_trade>div p:nth-child(1) {
+	font-size: 0.14rem;
+	width: 75%;
+	text-indent: 8%;
+	border-bottom: 1px solid white;
+	margin-bottom: 1%;
+}
+
+.map,.chart_top,.left_pie,.center_chart_left,.center_chart_right,.right_trade>div{
+	cursor: pointer;
+}
+
+
+.more{
+	color: cornflowerblue;
+	font-size: 0.12rem;
+	position: absolute;
+	bottom:-2px;
+	right: 0px;
+	text-decoration: underline;
+}
+
+
+/***********************footer*********************************/
+
+footer {
+	height: 6.7%;
+	line-height: 38px;
+	font-size: 0.12rem;
+}
+
+footer ul {
+	height: 100%;
+	width: 63%;
+	margin: 0 auto;
+}
+
+footer ul li {
+	float: left;
+	margin-right: 1%;
+}
+
 }

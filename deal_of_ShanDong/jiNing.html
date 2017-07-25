@@ -7,19 +7,20 @@
 		<style type="text/css">
 			body{
 				position: relative;
+				
 			}
 			.ok{
 				 position: absolute;
-				 left:-5%;
-				 top:5%;
+				 left:-64px;
+				 top:20px;
 				 transition: all 1s; 
 			}
 			.ok:hover{
 				position: absolute;
-				 left:-1%;
-				 top:5%;
+				 left:-20px;
+				 top:20px;
 			}
-		</style>
+			</style>
 	</head>
 	<body>
 		<div id="Bo">
@@ -43,7 +44,7 @@
 		    				<img src="img/未标题-1_04.gif" class="SASA"/>
 		    			<div class="TM">
 		    			<p>2017山东基本数据：</p>
-		    			<div class="Yi-W">
+		    				<div class="Yi-W">
 		    				<div class="GDp">
 		    					<span>GDP:</span>
 		    				    <span>12807.31</span><br/>
@@ -54,7 +55,7 @@
 		    				    <span>2807.31</span><br/>
 		    				    <span>-0.2%</span>
 		    				</div>
-		    			</div>
+		    			  </div>
 		    			<div class="Yi-W">
 		    				<div class="GDp">
 		    					<span>供货量:</span>
@@ -71,7 +72,7 @@
 		    		</div>
 		    		<div class="Er">
 		    			<img src="img/未标题-1_03.gif" class="BIao  "/>
-		    			<div class="Ming"></div>
+		    			   <div class="Ming"></div>
 		    			<img src="img/未标题-1_04.gif" class="FD  DADA"/>
 		    		</div>
 		    		<div class="Sa">
@@ -197,68 +198,37 @@
 		    		</div>
 		    	</div>
 		    </div>
-		    <div class="ZZ">
-		    		<div class="FA">
-		    			<img src="img/7777.gif" class="So"/>
-		    			<div class="Bo-Liang-A"></div>	
-		    		</div>
-		    	</div>
-		     <div class="CC">
-		    		<div class="FA">
-		    			<img src="img/7777.gif" class="So"/>
-		    			<div class="Bo-Liang-B">
-		    			</div>	
-		    		</div>
-		    	</div>
-		    <div class="II">
-		    	<div class="FA">
-		    		<img src="img/7777.gif" class="So"/>
-		    		  <div class="MoMo"></div>
-		    	</div>	
-		    </div>
 		<div class="footer">
 			<span>京公网安备 11000002000088号</span>|
 			<span>京ICP证070359号|互联网药品信息服务资格证编号（京）-经营性-2014-0008</span>|
 			<span>新出发京零字第大12007号</span>
 		</div>
-    </div>
+        <div class="II">
+		    	<div class="FA">
+		    		<img src="img/7777.gif" class="So"/>
+		    	</div>
+		    </div>
+		    <div class="DD">
+		    	<div class="FC">
+		    		<img src="img/7777.gif" class="UU"/>
+		    	</div>
+		    </div>
+		     <div class="JJ">
+		    	<div class="FG">
+		    		<img src="img/7777.gif" class="YU"/>
+		    	</div>
+		    </div>
+		</div>
+		
 <div class="ok"><a href="../index.html"><img src="img/yy.png"/></a></div>
 	</body>
 	<script type="text/javascript" src="js/echarts.js"></script>
 	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
 	<script type="text/javascript" src="js/JIning.js"></script>
-	<script type="text/javascript" >
-	$('.SASA').on('click',function(){
-		$('.II').css('z-index','9999')
-		$('.II').css('opacity','1')
-	})
-	$('.So').on('click',function(){
-		$('.II').css('opacity','-1')
-		$('.II').css('z-index','-1')
-	})
-	
-	
-	
-	$('.FD').on('click',function(){
-		$('.ZZ').css('opacity','1')
-		$('.ZZ').css('z-index','9999')
+	<script type="text/javascript">
 		
-	})
-	$('.So').on('click',function(){
-		$('.ZZ').css('opacity','0')
-		$('.ZZ').css('z-index','-1')
-	})
-	$('.SXSX').on('click',function(){
-		$('.CC').css('z-index','9999')
-		$('.CC').css('opacity','1')
-	})
-	$('.So').on('click',function(){
-		$('.CC').css('z-index','-1')
-		$('.CC').css('opacity','0')
-	})
-	
-	
-	
+		
+		
 	$(window).load(function(){
 		$('.TM').css('opacity','1');
 	})
@@ -276,7 +246,7 @@
 					_field.animate({
 						marginTop: -_h + 'px'
 					}, 600, function() { //通过取负margin值,隐藏第一行
-						_field.css('marginTop', '5px').appendTo(_wrap); //隐藏后,将该行的margin值置零,并插入到最后,实现无缝滚动
+						_field.css('marginTop', '3%').appendTo(_wrap); //隐藏后,将该行的margin值置零,并插入到最后,实现无缝滚动
 					})
 				}, _interval) //滚动间隔时间取决于_interval
 			}).trigger('mouseleave'); //函数载入时,模拟执行mouseleave,即自动滚动

@@ -8,17 +8,18 @@
 		<style type="text/css">
 			body{
 				position: relative;
+				
 			}
 			.ok{
 				 position: absolute;
-				 left:-5%;
-				 top:5%;
+				 left:-64px;
+				 top:20px;
 				 transition: all 1s; 
 			}
 			.ok:hover{
 				position: absolute;
-				 left:-1%;
-				 top:5%;
+				 left:-20px;
+				 top:20px;
 			}
 		</style>
 	</head>
@@ -62,8 +63,8 @@
 		<script type="text/javascript" src="js/china-contour.js" ></script>
 		
 		<script>
-		
-		var option=[];
+//		window.onresize = function(){
+			var option=[];
 		
 	
 	//************地图
@@ -314,13 +315,14 @@ var series = [];
                 textStyle:{
                 	fontSize:16,
                 },
-                formatter: {
-				    data: convertData(BJData),
-                },
+//              formatter: {
+//				    data: convertData(BJData),
+//              },
                 
             },
         },
         symbolSize: function (val) {
+        	console.log(val);
             return val[2] / 8;
         },
         data: BJData.map(function (dataItem) {
@@ -335,7 +337,7 @@ var series = [];
 		        label: {
 		            normal: {
 		                textStyle:{
-		                	color:dataItem[2].color
+		                	color:'dataItem[2].color'   //数字
 		                }
 		            },
 		            emphasis: {
@@ -350,10 +352,10 @@ option[0] = {
 		title : {
 						    text: '2017中国采购量走势图',
 						    left: '5%',
-							bottom:'15%',
+							bottom:'1%',
 						    textStyle : {
-						         color: '#fff',
-						         fontWeight:'lighter',
+						         color: '#1A1A1A',
+						         fontWeight:'normal',
 						         fontSize:26
 						     }
 						 },
@@ -380,9 +382,14 @@ option[0] = {
         },
     geo:[{
 			map: 'china-contour',
-			roam: false,
 			silent:true,
-			zoom:1.1,
+			left:'10%',
+			top:'15%',
+//			roam: true,
+//			scaleLimit:{
+//				min:1,
+//				max:3,
+//			},
 			label: {
 				normal: {
 					show: false,
@@ -408,6 +415,13 @@ option[0] = {
 			}
 		},{
         map: 'china',
+		left:'10%',
+		top:'15%',
+//      roam: true,
+//		scaleLimit:{
+//				min:1,
+//				max:3,
+//			},
         label: {
             emphasis: {
                 show: true,
@@ -418,8 +432,6 @@ option[0] = {
                 }
             }
         },
-        zoom:1.1,
-        roam: false,
         itemStyle: {
             normal: {
                 areaColor: '#345F93',
@@ -427,6 +439,7 @@ option[0] = {
                 borderWidth: '2',
                 
             },
+         
             emphasis: {
             	opacity:0.5
             }
@@ -452,7 +465,7 @@ option[0] = {
 				    textStyle : {
 				         color: '#fff',
 				         fontWeight:'lighter',
-				         fontSize:16
+				         fontSize:15
 				     }
 				  },
 					backgroundColor:'#2f79be',
@@ -461,7 +474,7 @@ option[0] = {
                     },
                     legend: {
                         data:['采购量','同期环比曲线'],
-                        top:'12%',
+                        top:'16%',
                         right:'4%',
                         textStyle:{
 				        	color:'#fff',
@@ -565,7 +578,7 @@ option[0] = {
 				    textStyle : {
 				         color: '#fff',
 				         fontWeight:'lighter',
-				         fontSize:16
+				         fontSize:15
 				     }
 				  },
 					backgroundColor:'#2f79be',
@@ -574,10 +587,12 @@ option[0] = {
                     },
                     legend: {
                         data:['成交量','同期环比曲线'],
-                        top:'12%',
+                        top:'16%',
                         right:'4%',
                         textStyle:{
 				        	color:'#fff',
+				     
+				        	
 				        },
                     },
                     xAxis: [
@@ -673,7 +688,7 @@ option[0] = {
 				    textStyle : {
 				         color: '#fff',
 				         fontWeight:'lighter',
-				         fontSize:16,
+				         fontSize:15,
 				     }
 				  },
 			backgroundColor: '#2f79be',
@@ -717,7 +732,7 @@ option[0] = {
 		            },
 		            labelLine: {
 		                normal: {
-		                    show: false,
+		                    show: true,
 		                    length:1,
 		                },
 		                emphasis: {
@@ -861,7 +876,7 @@ option[0] = {
 				    textStyle : {
 				         color: '#fff',
 				         fontWeight:'lighter',
-				         fontSize:16,
+				         fontSize:15,
 				     }
 				  },
 					backgroundColor:'#2f79be',
@@ -871,7 +886,7 @@ option[0] = {
                     legend: {
                         data:['采购量','同期环比曲线'],
 //                      left:'60%',
-                        top:'12%',
+                        top:'14%',
                         right:'4%',
                         textStyle:{
 				        	color:'#fff',
@@ -1121,6 +1136,9 @@ option[0] = {
 			var oBox = document.querySelector(".box");
 			oShadeInner.removeChild(oBox);
 		}
+//		};	
+		
+		
 		
 		
 		</script>
